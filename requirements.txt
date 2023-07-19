@@ -1,0 +1,7 @@
+langchain
+docarray[hnswlib]
+unstructured[local-inference]
+InstructorEmbedding
+sentence-transformers
+pypdf
+'git+https://github.com/facebookresearch/detectron2.git'
