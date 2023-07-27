@@ -1,6 +1,7 @@
 docarray[hnswlib]
 docx2txt
 faiss-gpu
+html2text
 instructorembedding
 langchain
 pdfplumber
