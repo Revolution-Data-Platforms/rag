@@ -1,7 +1,12 @@
-langchain
 docarray[hnswlib]
-unstructured[local-inference]
-InstructorEmbedding
+docx2txt
+faiss-gpu
+instructorembedding
+langchain
+pdfplumber
+python-dotenv
 sentence-transformers
-pypdf
-'git+https://github.com/facebookresearch/detectron2.git'
+torch
+tqdm
+transformers
+unstructured[local-inference]
