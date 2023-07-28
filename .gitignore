@@ -164,8 +164,11 @@ cython_debug/
 .DS_Store
 
 # Environment files
-# *.env
+*.env
 
 # Data
 data/
 vectorstores/
+
+# VS Code
+.vscode/
