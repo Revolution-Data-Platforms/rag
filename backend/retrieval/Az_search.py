@@ -220,4 +220,6 @@ class AzureSearch(VectorStore):
             return self.semantic_search_full_text(query, k=k, **kwargs)
         else:
             return self.semantic_search_contents(query, k=k, **kwargs)
+        
 
+        

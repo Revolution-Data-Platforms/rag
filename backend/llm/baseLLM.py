@@ -1,4 +1,3 @@
-# %%
 from typing import Any, List, Mapping, Optional
 import requests, json
 from langchain.callbacks.manager import CallbackManagerForLLMRun
@@ -32,15 +31,3 @@ class Remote_LLM(LLM):
     def _identifying_params(self) -> Mapping[str, Any]:
         """Get the identifying parameters."""
         return {"endpoint": self.endpoint}
-
-# %%
-if __name__ == "__main__":
-    
-    endpoint = "http://mavrik.specgood.ai:8000/answer"
-    question = "What is the meaning of life?"
-    llm = Remote_LLM(endpoint=endpoint)
-    llm(prompt='tell me a story')
-    
-# %%
-
-# %%

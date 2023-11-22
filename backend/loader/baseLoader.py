@@ -23,7 +23,7 @@ from langchain.document_loaders import (
 
 
 
-class DocumentFactory:
+class baseLoader:
     def __init__(self):
         self.Loader_Mapping = {
                                 "csv": (CSVLoader, {}),

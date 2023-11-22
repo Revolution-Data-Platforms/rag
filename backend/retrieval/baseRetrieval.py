@@ -1,11 +1,9 @@
-# %%
-# Creating two Indexers for the two different types of data: SOP & General
 import re
 from langchain.vectorstores import FAISS
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
-# %%
-class DataMind:
+
+class baseRetrieval(object):
     def __init__(self, vectore_store, embedding, k=5, AzSearch_search_type='semantic_contents', clean_text = True) -> None:
 
         """
@@ -126,8 +124,3 @@ class DataMind:
     
 
         return prompt.format(question = question, context_data=context_text_as_json).strip(), sources
-
-
-
-
-
