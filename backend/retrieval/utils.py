@@ -1,9 +1,86 @@
 import os, re, requests
+import json
 from tqdm import tqdm
+import pandas as pd
+import uuid
 from langchain.text_splitter import MarkdownTextSplitter
 from langchain.vectorstores import Chroma
 from langchain.embeddings import HuggingFaceEmbeddings
 
+
+def create_section_structure(data):
+    sections = []
+    current_section = None
+
+    for item in data:
+        section_page = item.get("Page", -1)
+        section_text = item.get("Text", "")
+        section_type = item.get("Path", "").split('//Document/')[-1]
+        table_path = item.get("filePaths", [""])[0] if "filePaths" in item else ""
+
+        if current_section is None or 'H' in section_type:
+            # If it's a new section or starts with a heading, create a dictionary for it
+            current_section = {'header': section_text, 'content': []}
+            sections.append(current_section)
+        else:
+            # If it's not a new section, append text, table_path, and page number
+            section_content = {'text': section_text, \
+                               'table_path': table_path, \
+                                'page_number': section_page, \
+                                'type': section_type, \
+                                'header': current_section['header']}
+            current_section['content'].append(section_content)
+        if 'Kids' in item.keys():
+            create_section_structure(item['Kids'])
+    return sections
+
+def metadata_func(record: dict, metadata: dict) -> dict:
+    metadata["header"] = record.get("header")
+    metadata["table_path"] = record.get("table_path")
+    metadata["page_number"] = record.get("page_number")
+    metadata["type"] = record.get("type")
+    return metadata
+
+def save_json(doc):
+    with open('doc_1.json', 'w') as f:
+        json.dump(doc, f)
+
+def exclude_toc(docs):
+    retrieved_headers = list(set([doc.metadata['header'] for doc in docs \
+                     if 'Table of Contents ' not in doc.metadata['header']]))
+    res = []
+    for doc in docs:
+        if doc.metadata['header'] in retrieved_headers:
+            if doc in res:
+                continue
+            res.append(doc)
+    return res
+
+def filter_empty(docs):
+    loaded_data_ = [page for page in docs \
+                    if page.page_content or \
+                    page.metadata['table_path']]
+    return loaded_data_
+
+def filter_redundant(docs):
+    ids = [str(uuid.uuid5(uuid.NAMESPACE_DNS, doc.page_content)) for doc in docs]
+    seen_ids = set()
+    unique_docs = [doc for doc, id in zip(docs, ids) if id not in seen_ids and (seen_ids.add(id) or True)]
+
+    return unique_docs
+
+def md_table(tab_path):
+    df = pd.read_excel(tab_path)
+    return df.to_markdown()
+
+def remove_duplicates(input_list):
+    output_list = []
+
+    for item in input_list:
+        if item not in output_list:
+            output_list.append(item)
+
+    return output_list
 
 
 def decode_base64(encoded_link):

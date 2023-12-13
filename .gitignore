@@ -6,6 +6,11 @@ __pycache__/
 # C extensions
 *.so
 
+# remove any file in any subfolder named figures
+**/figures
+*.png
+*.zip
+
 # Distribution / packaging
 .Python
 build/
@@ -73,6 +78,9 @@ instance/
 # Scrapy stuff:
 .scrapy
 
+# Notebook folders
+.ipynb_checkpoints
+Notebooks/
 # Sphinx documentation
 docs/_build/
 
@@ -177,3 +185,55 @@ vectorstores/
 
 # VS Code
 .vscode/
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart0.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart8.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart9.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart10.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart11.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart12.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart22.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart31.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart32.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart37.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart38.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart42.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart45.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart48.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart51.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart52.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart55.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart58.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart59.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart60.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart61.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart62.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart63.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart66.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart67.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart70.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart71.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart72.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart73.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart74.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart75.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart76.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart79.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart80.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart81.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart85.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart86.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart87.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart88.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart89.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart90.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart93.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart96.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart99.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart100.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart101.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart104.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart107.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart110.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart111.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart112.png
+output/5G_Netwrok_Slicing_Installation_Guide_21.06.pdf/figures/fileoutpart115.png

@@ -1,15 +1,15 @@
 
 import os
-from langchain.vectorstores import FAISS
-
+from langchain.embeddings.sentence_transformer import SentenceTransformerEmbeddings
 
 class baseEmbedder(object):
 
-    def __init__(self, config):
-        self.config = config
+    def __init__(self, model_name: str= "all-MiniLM-L6-v2"):
+        self.embedding_function = SentenceTransformerEmbeddings(model_name=model_name)
+        self.model_name = model_name
 
     def embed(self, data):
-        raise NotImplementedError("Embedding method not implemented")
+        self.embedding_function.embed(data)
     
     def embedBatch(self, data):
         raise NotImplementedError("Batch embedding method not implemented")
