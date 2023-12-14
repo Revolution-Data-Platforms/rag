@@ -5,6 +5,14 @@ class BasePrompter:
     def __init__(self, prompt):
         self.prompt = prompt
 
+    def prepare_context(self, ctx_lst):
+        """Prepare context for prompt."""
+        context = ''
+        for ctx in ctx_lst:
+            context += ctx + '\n\n'
+        return context
+
+
     def prompt(self) -> str:
         # Install transformers from source - only needed for versions <= v4.34
         # pip install git+https://github.com/huggingface/transformers.git

@@ -59,17 +59,17 @@ def get_relevant_docs(query, docs):
     reranked_res = reranker.rerank(query, relevant_docs)
     return reranked_res
 
-def get_context(docs):
-    context = ciena_retreival.get_context(docs)
-    return context
-
-
+def get_context(docs, headers):
+    context, sources = ciena_retreival.get_context(docs, headers)
+    return context, sources
 
 
 if __name__ == "__main__":
     loaded_db = load_db()
-    # cleaned_db = clean(loaded_db)
+    cleaned_db = clean(loaded_db)
     query = "Table BPO Runtime License"
     relevant_docs = get_relevant_docs(query, loaded_db)
-    context = get_context(relevant_docs)
+    rel_headers = relevant_headers(relevant_docs)
+    import pdb; pdb.set_trace()
+    context, sources = get_context(loaded_db, rel_headers)
     print(context)

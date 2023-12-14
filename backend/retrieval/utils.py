@@ -45,6 +45,11 @@ def save_json(doc):
     with open('doc_1.json', 'w') as f:
         json.dump(doc, f)
 
+
+def relevant_headers(docs):
+    retrieved_headers = list(set([doc.metadata['header'] for doc in docs]))
+    return retrieved_headers
+
 def exclude_toc(docs):
     retrieved_headers = list(set([doc.metadata['header'] for doc in docs \
                      if 'Table of Contents ' not in doc.metadata['header']]))

@@ -33,20 +33,34 @@ class CienaRetrieval:
         final_res = semantic_res + keyword_res
         return final_res
 
-    def get_context(self, docs):
+    def get_context(self, docs, headers):
         db = Chroma.from_documents(docs, self.embedder)
         context = []
-        import pdb;pdb.set_trace()
-        for doc in docs:
-            base_name = os.path.basename(doc.metadata["source"])
-            table_dir = os.path.dirname(doc.metadata["source"])
+        res = db.get(where={"header": {"$in": headers}})
 
-            res = db.get(where={"header": doc.metadata["header"]})
+        sources = {}
 
-            for i, item in enumerate(res['metadatas']):
-                if 'Table'in item["type"] and item['table_path'] != '':
-                    context.append(md_table(os.path.join(table_dir, item['table_path'])))
-                else:
-                    context.append(res['documents'][i])
-        return context
+        for i, item in enumerate(res['metadatas']):
+            cur_header = item['header']
+            table_dir = os.path.dirname(item["source"])
+
+            data_dir = './data'
+            pdf_dir = os.path.basename(item["source"]).split('.')[0]
+            pdf_name = pdf_dir + '.pdf'
+            pdf_path = os.path.join(data_dir, pdf_dir, pdf_name)
+
+            if pdf_path not in sources:
+                sources[pdf_name] = pdf_path
+
+            if 'Table'in item["type"] and item['table_path'] != '':
+                table_path = os.path.join(table_dir, item['table_path'])
+                context.append(md_table(table_path))
+            else:
+                context.append(res['documents'][i])
+            
+            if i < len(res['metadatas']) - 1:
+                next_header = res['metadatas'][i+1]['header']
+                if next_header != cur_header:
+                    context.append('\n\n')
+        return context, sources
 
