@@ -66,12 +66,16 @@ def clean(docs):
 
 def get_relevant_docs(query, docs):
     """Get relevant documents from Ciena database."""
+    if len(query) == 0 or len(docs) == 0:
+        return []
     ciena_retrieval = CienaRetrieval(**retriael_kwargs)
     relevant_docs = ciena_retrieval.get_res(query, docs)
     reranked_res = reranker.rerank(query, relevant_docs)
     return reranked_res
 
 def get_context(docs, headers):
+    if len(headers) == 0:
+        return [], []
     context, sources = ciena_retreival.get_context(docs, headers)
     return context, sources
 
@@ -88,39 +92,53 @@ def bot(history):
         yield history
 
 
-loaded_db = load_db()
-cleaned_db = clean(loaded_db)
 
 def main_get_src_ctx(message, seconds):
-    time.sleep(seconds)
     query = message
     relevant_docs = get_relevant_docs(query, cleaned_db)
     rel_headers = relevant_headers(relevant_docs)
     context, sources = get_context(loaded_db, rel_headers)
     return context, sources
 
-async def slow_echo(message, history):
-    src, ctx = await sync_to_async(main_get_src_ctx)(message, 1)
-    # src, ctx = await main_get_src_ctx(message)
-    print(src, ctx)
+def gt_llm_answer(question, ctx, src):
+    LLM_kwargs={}
+    llm = Remote_LLM(
+        endpoint="http:0.0.0.0:8000/answer",
+        generation_config=LLM_kwargs
+    )
+    prompt = f"""
+    You are a powerful AI asistant that answers only based on the given contex. If the context is not enough, you can ask for more information.
+    Given the following context {ctx}, based on those sources {src}, answer the following question: {question}
+    """
+    answer = llm(prompt)
+    return answer, src
 
+
+def slow_echo(message, history):
+    ctx, src = main_get_src_ctx(message, 3)
+    answer, src = gt_llm_answer(message, ctx, src)
+    # convert list ctx to string
+    ctx =' '.join(ctx)
+    return ctx if ctx else "Hi"
 
 def main():
+    global loaded_db
+    global cleaned_db
+    loaded_db = load_db()
+    cleaned_db = clean(loaded_db)
     gr.ChatInterface(
-            slow_echo,
-            chatbot=gr.Chatbot(height=300),
-            textbox=gr.Textbox(placeholder="Ask me a yes or no question", container=False, scale=7),
-            title="BP Chatbot",
-            description="Ask Yes Man any question",
-            theme="soft",
-            examples=["Hello", "Am I cool?", "Are tomatoes vegetables?"],
-            cache_examples=True,
-            retry_btn=None,
-            undo_btn="Delete Previous",
-            clear_btn="Clear",
-        ).launch()
-loop = asyncio.get_event_loop()
-loop.run_until_complete(main())
-loop.close()
-# if __name__ == "__main__":
-#     main()
+        slow_echo,
+        chatbot=gr.Chatbot(height=300),
+        textbox=gr.Textbox(placeholder="Ask me a yes or no question", container=False, scale=7),
+        title="BP Chatbot",
+        description="Ask Yes Man any question",
+        theme="soft",
+        examples=["Hello", "Am I cool?", "Are tomatoes vegetables?"],
+        cache_examples=True,
+        retry_btn=None,
+        undo_btn="Delete Previous",
+        clear_btn="Clear",
+    ).launch()
+
+if __name__ == "__main__":
+    main()
