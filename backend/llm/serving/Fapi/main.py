@@ -21,6 +21,18 @@ print(architecture)
 db_path = f'{log_path}/{architecture}.txt'
 
 
+from transformers import BitsAndBytesConfig
+quantization_config = BitsAndBytesConfig(
+   load_in_4bit=True,
+   bnb_4bit_compute_dtype=torch.float16,
+   bnb_4bit_quant_type="nf4",
+   bnb_4bit_use_double_quant=True,
+)
+
+
+
+
+
 
 # should be logging
 print(f'Loading model...{architecture}')
@@ -35,8 +47,7 @@ def write_to_file(msg):
 # Loading model and tokenizer
 model = transformers.AutoModelForCausalLM.from_pretrained(
     architecture,
-    torch_dtype=torch.float16,
-    load_in_8bit=eval(load_in_8bit),
+    quantization_config=quantization_config,
     device_map="auto",
 )
 tokenizer = transformers.AutoTokenizer.from_pretrained(

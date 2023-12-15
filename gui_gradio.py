@@ -1,6 +1,5 @@
 import gradio as gr
 import os
-from asgiref.sync import sync_to_async
 from backend.llm.baseLLM import Remote_LLM 
 # Chatbot demo with multimodal input (text, markdown, LaTeX, code blocks, image, audio, & video). Plus shows support for streaming text.
 from backend.retrieval.ciena_retreival import CienaRetrieval
@@ -101,14 +100,16 @@ def main_get_src_ctx(message, seconds):
     return context, sources
 
 def gt_llm_answer(question, ctx, src):
-    LLM_kwargs={}
+    endpoint = " http://0.0.0.0:8000/answer"
+    LLM_kwargs={'max_new_tokens': 500, 'temperature': 0.5}
+
     llm = Remote_LLM(
-        endpoint="http:0.0.0.0:8000/answer",
+        endpoint="http://0.0.0.0:8000/answer",
         generation_config=LLM_kwargs
     )
     prompt = f"""
     You are a powerful AI asistant that answers only based on the given contex. If the context is not enough, you can ask for more information.
-    Given the following context {ctx}, based on those sources {src}, answer the following question: {question}
+    Given the following context {ctx}, answer the following question: {question}
     """
     answer = llm(prompt)
     return answer, src
@@ -116,9 +117,10 @@ def gt_llm_answer(question, ctx, src):
 
 def slow_echo(message, history):
     ctx, src = main_get_src_ctx(message, 3)
-    answer, src = gt_llm_answer(message, ctx, src)
     # convert list ctx to string
     ctx =' '.join(ctx)
+    answer, src = gt_llm_answer(message, ctx, src)
+    print(answer)
     return ctx if ctx else "Hi"
 
 def main():
@@ -138,7 +140,7 @@ def main():
         retry_btn=None,
         undo_btn="Delete Previous",
         clear_btn="Clear",
-    ).launch()
+    ).launch(server_port= 8888)
 
 if __name__ == "__main__":
     main()
