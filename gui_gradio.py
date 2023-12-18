@@ -96,6 +96,7 @@ def main_get_src_ctx(message, seconds):
     query = message
     relevant_docs = get_relevant_docs(query, cleaned_db)
     rel_headers = relevant_headers(relevant_docs)
+    rel_headers = [x for x in rel_headers if x != 'Table of Contents ']
     context, sources = get_context(loaded_db, rel_headers)
     return context, sources
 
@@ -107,10 +108,14 @@ def gt_llm_answer(question, ctx, src):
         endpoint="http://0.0.0.0:8000/answer",
         generation_config=LLM_kwargs
     )
+    ctx = ctx[len(ctx) // 2:]
+    if len(ctx) > 2000: 
+        ctx = ctx[:2000]
     prompt = f"""
     You are a powerful AI asistant that answers only based on the given contex. If the context is not enough, you can ask for more information.
     Given the following context {ctx}, answer the following question: {question}
     """
+
     answer = llm(prompt)
     return answer, src
 
@@ -120,8 +125,7 @@ def slow_echo(message, history):
     # convert list ctx to string
     ctx =' '.join(ctx)
     answer, src = gt_llm_answer(message, ctx, src)
-    print(answer)
-    return ctx if ctx else "Hi"
+    return answer #
 
 def main():
     global loaded_db

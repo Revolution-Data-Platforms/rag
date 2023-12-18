@@ -43,7 +43,7 @@ def write_to_file(msg):
     f.write(msg)
     f.close()
 
-
+# from attention_sinks import AutoModelForCausalLM
 # Loading model and tokenizer
 model = transformers.AutoModelForCausalLM.from_pretrained(
     architecture,
