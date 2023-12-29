@@ -34,7 +34,7 @@ def load_db():
     loaded_data = []
     for r, d, f in os.walk(dir):
         
-        for file in f:
+        for file in f: 
             # if "10Aug-BP_Engineering_guide" in file or "Blue_Planet_MLA_Cloud_Deployment_Guide" in file:
             if '.json' in file and file != 'structuredData.json':
                 dir_ = file.split('.')[0] + '.pdf'
@@ -131,6 +131,7 @@ def main():
     global loaded_db
     global cleaned_db
     loaded_db = load_db()
+    import pdb; pdb.set_trace()
     cleaned_db = clean(loaded_db)
     gr.ChatInterface(
         slow_echo,

@@ -9,6 +9,7 @@ parser.add_argument('--env', default='.env')
 args = parser.parse_args()
 
 load_dotenv(dotenv_path=args.env)
+# import pdb;pdb.set_trace()
 
 # Load environment variables
 architecture = os.environ.get('architecture')
@@ -29,11 +30,6 @@ quantization_config = BitsAndBytesConfig(
    bnb_4bit_use_double_quant=True,
 )
 
-
-
-
-
-
 # should be logging
 print(f'Loading model...{architecture}')
 
@@ -49,17 +45,18 @@ model = transformers.AutoModelForCausalLM.from_pretrained(
     architecture,
     quantization_config=quantization_config,
     device_map="auto",
+    trust_remote_code=True
 )
 tokenizer = transformers.AutoTokenizer.from_pretrained(
     architecture,
-    trust_remote_code=False
+    trust_remote_code=True
 )
 
 # Default generation parameters
 db_path = f'{log_path}/{architecture}.txt'
 
 generation_config = model.generation_config
-generation_config.max_new_tokens = 128
+generation_config.max_new_tokens = 256
 generation_config.pad_token_id = tokenizer.eos_token_id
 generation_config_default_dict = generation_config.to_dict()
 
@@ -88,7 +85,7 @@ def generate(question: str, gen_config):
         conf = generation_config_default_dict
     else:
         conf = {**generation_config_default_dict, **gen_config}
-
+    
     inputs = tokenizer(question, return_tensors="pt", return_token_type_ids=False).to(model.device)
     
     with torch.inference_mode():
@@ -105,3 +102,4 @@ def serve():
 
 if __name__ == "__main__":
     serve()
+

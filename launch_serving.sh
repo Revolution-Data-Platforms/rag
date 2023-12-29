@@ -1,2 +1,2 @@
-cd /home/akhaled/Ciena-Gen-AI/backend/llm/serving/Fapi
+cd /Ai/khaled/Ciena-Gen-AI/backend/llm/serving/Fapi
 python main.py --env serving.env
