@@ -1,7 +1,6 @@
 import gradio as gr
 import os
 from backend.llm.baseLLM import Remote_LLM 
-# Chatbot demo with multimodal input (text, markdown, LaTeX, code blocks, image, audio, & video). Plus shows support for streaming text.
 from backend.retrieval.ciena_retreival import CienaRetrieval
 from backend.embedder.baseEmbedder import baseEmbedder
 from backend.retrieval.utils import *
@@ -27,30 +26,26 @@ retriael_kwargs = {
 ciena_retreival = CienaRetrieval(**retriael_kwargs)
 reranker = Reranker()
 
-def load_db():
+def load_db(dir= './output/'):
     """Load Ciena database."""
     
-    dir = './output/'
     loaded_data = []
     for r, d, f in os.walk(dir):
         
-        for file in f: 
-            # if "10Aug-BP_Engineering_guide" in file or "Blue_Planet_MLA_Cloud_Deployment_Guide" in file:
+        for file in f:
             if '.json' in file and file != 'structuredData.json':
-                dir_ = file.split('.')[0] + '.pdf'
-                file_name = os.path.join(dir, dir_, file)
-                print(file_name)
+                file_name = os.path.join(r, file)
                 try:
                     loader = JSONLoader(
                         file_path=file_name,
                         jq_schema='.[].content[]',
-                        content_key="text", 
+                        content_key="text",
+                        text_content=False,
                         metadata_func=metadata_func)
 
                     loaded_data.extend(loader.load())
                     print(f"Successfully loaded file {file_name}")
                 except Exception as e:
-                    # import pdb; pdb.set_trace()
                     print(f"error in loading  file {file_name}")
                     print(e)
 
@@ -102,43 +97,46 @@ def main_get_src_ctx(message, seconds):
 
 def gt_llm_answer(question, ctx, src):
     endpoint = " http://0.0.0.0:8000/answer"
-    LLM_kwargs={'max_new_tokens': 500, 'temperature': 0.5}
+    LLM_kwargs={'max_new_tokens': 1500, 'temperature': 0.4}
 
     llm = Remote_LLM(
-        endpoint="http://0.0.0.0:8000/answer",
+        endpoint=endpoint,
         generation_config=LLM_kwargs
     )
-    ctx = ctx[len(ctx) // 2:]
-    if len(ctx) > 2000: 
-        ctx = ctx[:2000]
-    prompt = f"""
-    You are a powerful AI asistant that answers only based on the given contex. If the context is not enough, you can ask for more information.
-    Given the following context {ctx}, answer the following question: {question}
-    """
+    full_prompt = f"""\
+        <|system|> Given a part of a lengthy markdown document, answer the following question: `{question}`. Please, follow the same format as the source document given. </s>
+        <|user|>
+        please ONLY respond with: {{not_found_response}}, if the context does not provide the answer </s>
+        CONTEXT: {ctx} 
 
-    answer = llm(prompt)
+        <|assistant|> """
+
+    answer = llm(full_prompt)
     return answer, src
 
 
 def slow_echo(message, history):
     ctx, src = main_get_src_ctx(message, 3)
-    # convert list ctx to string
-    ctx =' '.join(ctx)
+    ctx = remove_duplicates_preserve_order(ctx)
+    ctx = '\n'.join(ctx)
     answer, src = gt_llm_answer(message, ctx, src)
-    return answer #
+    bot_response = answer.split('<|assistant|>')[1].split('</s>')[0]
+    # with open('response.txt', 'w') as f:
+    #     f.write(bot_response)
+        
+    return bot_response #
 
+
+loaded_db = load_db()
+cleaned_db = clean(loaded_db)
 def main():
-    global loaded_db
-    global cleaned_db
-    loaded_db = load_db()
-    import pdb; pdb.set_trace()
-    cleaned_db = clean(loaded_db)
+    
     gr.ChatInterface(
         slow_echo,
         chatbot=gr.Chatbot(height=300),
-        textbox=gr.Textbox(placeholder="Ask me a yes or no question", container=False, scale=7),
+        textbox=gr.Textbox(placeholder="Ask Me any question related to BP Docs", container=False, scale=7),
         title="BP Chatbot",
-        description="Ask Yes Man any question",
+        description="Ask Me any question related to BP Docs",
         theme="soft",
         examples=["Hello", "Am I cool?", "Are tomatoes vegetables?"],
         cache_examples=True,

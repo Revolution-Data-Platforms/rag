@@ -10,13 +10,25 @@ class Reranker:
     def rerank(self, query, docs, k=8):
         
         cross_encoder = CrossEncoder(self.rereanker_model)
-        ranked_Res = []
+        ranked_Res = {}
         for doc in docs:
+            if doc.metadata['header'] not in ranked_Res:
+                ranked_Res[doc.metadata['header']] = 0
+                
             score = cross_encoder.predict([query, doc.page_content])
             if expit(score) > 0.5:
-                ranked_Res.append(doc)
 
-        if len(ranked_Res) > k:
-            ranked_Res = ranked_Res[:k]
+                ranked_Res[doc.metadata['header']] += expit(score)
+        if 'Table of Contents ' in ranked_Res.keys():
+            # remove the key 'Table of Contents'
+            ranked_Res.pop('Table of Contents ')
+            
+        if len(ranked_Res.keys()) > k:
+            ranked_Res = dict(sorted(ranked_Res.items(), key=lambda item: item[1], reverse=True)[:k])
 
-        return ranked_Res
+        res = []
+        for doc in docs:
+            if doc.metadata['header'] in list(ranked_Res.keys())[0]:
+                res.append(doc)
+        
+        return res

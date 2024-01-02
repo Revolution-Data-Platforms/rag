@@ -52,7 +52,7 @@ class CienaRetrieval:
             if pdf_path not in sources:
                 sources[pdf_name] = pdf_path
 
-            if 'Table'in item["type"] and item['table_path'] != '':
+            if 'Table' in item["type"] and item['table_path'] != '':
                 table_path = os.path.join(table_dir, item['table_path'])
                 context.append(md_table(table_path))
             else:

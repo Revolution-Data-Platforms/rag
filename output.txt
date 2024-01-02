@@ -1,13 +1,2 @@
  
-Table 3. BPO Runtime Licenses 
-|    | PRODUCT _x000D_             | PART NUMBER _x000D_          | PRODUCT DESCRIPTION _x000D_                                |
-|---:|:----------------------------|:-----------------------------|:-----------------------------------------------------------|
-|  0 | MDSO _x000D_                | S19-APP-MDSO-S1P1 _x000D_    | BP APPLICATION MDSO LICENSE _x000D_                        |
-|  1 | MDSO Geo Redundancy _x000D_ | S19-APP-MDSO-GR-S1P1 _x000D_ | BP APPLICATION MDSO GEO REDUNDANCY LICENSE _x000D_         |
-|  2 | NFVO _x000D_                | S19-APP-NFVO-S1P1 _x000D_    | BP APPLICATION NFVO LICENSE _x000D_                        |
-|  3 | NFVO Geo Redundancy _x000D_ | S19-APP-NFVO-GR-S1P1 _x000D_ | BP APPLICATION NFVO GEO REDUNDANCY LICENSE _x000D_         |
-|  4 | Bandwidth on Demand _x000D_ | S19-APP-BOD-S1P1 _x000D_     | BP ADD-ON APPLICATION BANDWIDTH ON DEMAND LICENSE _x000D_  |
-|  5 | 5G Network Slicing _x000D_  | S19-APP-5GSLI-S1P0 _x000D_   | BP ADD-ON APPLICATION 5G NETWORK SLICING LICENSE _x000D_   |
-|  6 | API Adaption Layer _x000D_  | S19-APP-APIGW-S1P0 _x000D_   | BP ADD-ON APPLICATION API ADAPTATION LAYER LICENSE _x000D_ |
-|  7 | TMF 633 Plugin _x000D_      | S19-APP-TMF633-S1P0 _x000D_  | BP ADD-ON SINGLE TMF 633 PLUGIN LICENSE _x000D_            |
-|  8 | TMF 638 Plugin _x000D_      | S19-APP-TMF638-S1P0 _x000D_  | BP ADD-ON SINGLE TMF 638 PLUGIN LICENSE _x000D_            |
+You can deploy Blue Planet products using the Blue Planet native platform, or using the Kubernetes open source container orchestration platform.

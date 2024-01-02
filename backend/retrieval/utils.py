@@ -45,6 +45,10 @@ def save_json(doc):
     with open('doc_1.json', 'w') as f:
         json.dump(doc, f)
 
+def remove_duplicates_preserve_order(seq):
+    seen = set()
+    return [x for x in seq if not (x in seen or seen.add(x))]
+
 
 def relevant_headers(docs):
     retrieved_headers = list(set([doc.metadata['header'] for doc in docs]))

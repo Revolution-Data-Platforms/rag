@@ -1,0 +1,46 @@
++: give me a table for ciena's BPO Runtime License
+
+=========================================================
+
++: How to Activate bpfirewall Configuration Changes
+Answer: page 76, source: Blue Planet UAA RHEL 
+
+=========================================================
+
++Where can I deploy Blue Planet platform and solutions on?
+Answer: Page 7, source: BP engineering guide
+
+=========================================================
+
++ What are Supported OS for cloud deployment using Kubernetes platform
+Answer:Page 26, source: BP engineering guide
+
+=========================================================
+
+
+
+
+
+
+
+
+what are the Blue Planet Inventory (BPI) scaling options
+
+
+
+what is Regions and Availability Zones in cloud 
+
+What are the Installation requirements for BPUAA
+
+
+
+
+
+
+
+how to Verify the Configuration for BPUAA hosts
+
+
+
+give me a table of the default outgoing ports used by BPUAA.
+how to Configure geographical redundancy in BPUAA
