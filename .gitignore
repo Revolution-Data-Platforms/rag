@@ -6,6 +6,11 @@ __pycache__/
 # C extensions
 *.so
 
+# any sqlite3 database
+*.sqlite3
+# any file in /vectorstore
+/vectorstore
+
 # remove any file in any subfolder named figures
 **/figures
 *.png
