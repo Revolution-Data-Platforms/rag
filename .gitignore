@@ -9,7 +9,7 @@ __pycache__/
 # any sqlite3 database
 *.sqlite3
 # any file in /vectorstore
-/vectorstore
+# /vectorstore
 
 # remove any file in any subfolder named figures
 **/figures
