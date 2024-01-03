@@ -12,17 +12,19 @@ class CienaRetrieval:
         self.k = kwargs['k']
         self.embedder = kwargs['embedder']
         self.hybrid = kwargs['hybrid']
+        self.db = Chroma.from_documents(kwargs['db'], self.embedder)
+        self.key_db = BM25Retriever.from_documents(kwargs['db'], search_kwargs={"k": self.k, "threshold": self.threshold})
 
     def get_semantic_res(self, query, docs):
         """Retrieve semantic results from Ciena database."""
-        db = Chroma.from_documents(docs, self.embedder)
+        db = self.db
         retriever = db.as_retriever(search_kwargs={'k': self.k, 'threshold': self.threshold})
         semantic_res = retriever.get_relevant_documents(query= query)
         return semantic_res
 
     def get_keyword_res(self, query, docs):
         """Retrieve keyword results from Ciena database."""
-        key_word_retriever = BM25Retriever.from_documents(docs, search_kwargs={"k": self.k, "threshold": self.threshold})
+        key_word_retriever = self.key_db
         key_word_res = key_word_retriever.get_relevant_documents(query)
         return key_word_res
 
@@ -34,7 +36,7 @@ class CienaRetrieval:
         return final_res
 
     def get_context(self, docs, headers):
-        db = Chroma.from_documents(docs, self.embedder)
+        db = self.db
         context = []
         res = db.get(where={"header": {"$in": headers}})
 

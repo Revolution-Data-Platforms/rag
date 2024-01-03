@@ -1,5 +1,6 @@
 import gradio as gr
 import os
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 from backend.llm.baseLLM import Remote_LLM 
 from backend.retrieval.ciena_retreival import CienaRetrieval
 from backend.embedder.baseEmbedder import baseEmbedder
@@ -10,21 +11,6 @@ from langchain.document_loaders import JSONLoader
 import asyncio
 import time
 from concurrent.futures import ThreadPoolExecutor
-
-
-_executor = ThreadPoolExecutor(1)
-
-
-
-embedding_function = baseEmbedder().embedding_function
-retriael_kwargs = {
-    "threshold": "0.8",
-    "k": 20,
-    "embedder": embedding_function,
-    "hybrid": True
-}
-ciena_retreival = CienaRetrieval(**retriael_kwargs)
-reranker = Reranker()
 
 def load_db(dir= './output/'):
     """Load Ciena database."""
@@ -62,8 +48,8 @@ def get_relevant_docs(query, docs):
     """Get relevant documents from Ciena database."""
     if len(query) == 0 or len(docs) == 0:
         return []
-    ciena_retrieval = CienaRetrieval(**retriael_kwargs)
-    relevant_docs = ciena_retrieval.get_res(query, docs)
+    # ciena_retrieval = CienaRetrieval(**retriael_kwargs)
+    relevant_docs = ciena_retreival.get_res(query, docs)
     reranked_res = reranker.rerank(query, relevant_docs)
     return reranked_res
 
@@ -129,6 +115,17 @@ def slow_echo(message, history):
 
 loaded_db = load_db()
 cleaned_db = clean(loaded_db)
+
+embedding_function = baseEmbedder().embedding_function
+retrieval_kwargs = {
+    "threshold": "0.8",
+    "k": 20,
+    "embedder": embedding_function,
+    "hybrid": True,
+    "db": cleaned_db
+}
+ciena_retreival = CienaRetrieval(**retrieval_kwargs)
+reranker = Reranker()
 def main():
     
     gr.ChatInterface(
@@ -138,8 +135,8 @@ def main():
         title="BP Chatbot",
         description="Ask Me any question related to BP Docs",
         theme="soft",
-        examples=["Hello", "Am I cool?", "Are tomatoes vegetables?"],
-        cache_examples=True,
+        # examples=["hi"],
+        cache_examples=False,
         retry_btn=None,
         undo_btn="Delete Previous",
         clear_btn="Clear",
