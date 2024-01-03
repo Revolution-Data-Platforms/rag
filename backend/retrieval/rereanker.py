@@ -28,7 +28,9 @@ class Reranker:
         
         res = []
         for doc in docs:
-            if ranked_Res[doc.metadata['header']] == max_ele:
+            
+            if doc.metadata['header'] != 'Table of Contents ' and \
+            ranked_Res[doc.metadata['header']] == max_ele:
                 res.append(doc)
         
         return res
