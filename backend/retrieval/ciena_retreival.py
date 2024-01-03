@@ -12,33 +12,30 @@ class CienaRetrieval:
         self.k = kwargs['k']
         self.embedder = kwargs['embedder']
         self.hybrid = kwargs['hybrid']
-        self.db = Chroma.from_documents(kwargs['db'], self.embedder)
-        self.key_db = BM25Retriever.from_documents(kwargs['db'], search_kwargs={"k": self.k, "threshold": self.threshold})
+        self.db = kwargs['db']
+        # self.key_db = BM25Retriever.from_documents(kwargs['db'], search_kwargs={"k": self.k, "threshold": self.threshold})
 
-    def get_semantic_res(self, query, docs):
+    def get_semantic_res(self, query):
         """Retrieve semantic results from Ciena database."""
-        db = self.db
-        retriever = db.as_retriever(search_kwargs={'k': self.k, 'threshold': self.threshold})
+        retriever = self.db.as_retriever(search_kwargs={'k': self.k, 'threshold': self.threshold})
         semantic_res = retriever.get_relevant_documents(query= query)
         return semantic_res
 
-    def get_keyword_res(self, query, docs):
+    def get_keyword_res(self, query):
         """Retrieve keyword results from Ciena database."""
-        key_word_retriever = self.key_db
-        key_word_res = key_word_retriever.get_relevant_documents(query)
+        key_word_res = self.key_db.get_relevant_documents(query)
         return key_word_res
 
-    def get_res(self, query, docs):
+    def get_res(self, query):
         """Retrieve Hybrid search results from Ciena database."""
-        semantic_res = self.get_semantic_res(query, docs)
-        keyword_res = self.get_keyword_res(query, docs) if self.hybrid else []
-        final_res = semantic_res + keyword_res
+        semantic_res = self.get_semantic_res(query)
+        # keyword_res = self.get_keyword_res(query) if self.hybrid else []
+        final_res = semantic_res #+ keyword_res
         return final_res
 
-    def get_context(self, docs, headers):
-        db = self.db
+    def get_context(self, headers):
         context = []
-        res = db.get(where={"header": {"$in": headers}})
+        res = self.db.get(where={"header": {"$in": headers}})
 
         sources = {}
 

@@ -16,19 +16,19 @@ class Reranker:
                 ranked_Res[doc.metadata['header']] = 0
                 
             score = cross_encoder.predict([query, doc.page_content])
-            if expit(score) > 0.5:
-
-                ranked_Res[doc.metadata['header']] += expit(score)
+            if ranked_Res[doc.metadata['header']] < expit(score):
+                ranked_Res[doc.metadata['header']] = expit(score)
+                
         if 'Table of Contents ' in ranked_Res.keys():
-            # remove the key 'Table of Contents'
             ranked_Res.pop('Table of Contents ')
             
-        if len(ranked_Res.keys()) > k:
-            ranked_Res = dict(sorted(ranked_Res.items(), key=lambda item: item[1], reverse=True)[:k])
+        ranked_Res = dict(sorted(ranked_Res.items(), key=lambda item: item[1], reverse=True))
 
+        max_ele = max(ranked_Res.values())
+        
         res = []
         for doc in docs:
-            if doc.metadata['header'] in list(ranked_Res.keys())[0]:
+            if ranked_Res[doc.metadata['header']] == max_ele:
                 res.append(doc)
         
         return res

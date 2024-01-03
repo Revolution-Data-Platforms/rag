@@ -7,6 +7,7 @@ from backend.embedder.baseEmbedder import baseEmbedder
 from backend.retrieval.utils import *
 from backend.retrieval.rereanker import Reranker
 from langchain.document_loaders import JSONLoader
+from langchain.vectorstores import Chroma
 
 import asyncio
 import time
@@ -44,19 +45,19 @@ def clean(docs):
     return loaded_data
 
 
-def get_relevant_docs(query, docs):
+def get_relevant_docs(query):
     """Get relevant documents from Ciena database."""
-    if len(query) == 0 or len(docs) == 0:
+    if len(query) == 0:
         return []
-    # ciena_retrieval = CienaRetrieval(**retriael_kwargs)
-    relevant_docs = ciena_retreival.get_res(query, docs)
+    # ciena_retrieval = CienaRetrieval(**retrieval_kwargs)
+    relevant_docs = ciena_retreival.get_res(query)
     reranked_res = reranker.rerank(query, relevant_docs)
     return reranked_res
 
-def get_context(docs, headers):
+def get_context(headers):
     if len(headers) == 0:
         return [], []
-    context, sources = ciena_retreival.get_context(docs, headers)
+    context, sources = ciena_retreival.get_context(headers)
     return context, sources
 
 def add_text(history, text):
@@ -73,12 +74,11 @@ def bot(history):
 
 
 
-def main_get_src_ctx(message, seconds):
+def main_get_src_ctx(message):
     query = message
-    relevant_docs = get_relevant_docs(query, cleaned_db)
+    relevant_docs = get_relevant_docs(query)
     rel_headers = relevant_headers(relevant_docs)
-    rel_headers = [x for x in rel_headers if x != 'Table of Contents ']
-    context, sources = get_context(loaded_db, rel_headers)
+    context, sources = get_context(rel_headers)
     return context, sources
 
 def gt_llm_answer(question, ctx, src):
@@ -90,57 +90,55 @@ def gt_llm_answer(question, ctx, src):
         generation_config=LLM_kwargs
     )
     full_prompt = f"""\
-        <|system|> Given a part of a lengthy markdown document, answer the following question: `{question}`. Please, follow the same format as the source document given. </s>
-        <|user|>
-        please ONLY respond with: {{not_found_response}}, if the context does not provide the answer </s>
-        CONTEXT: {ctx} 
+<|system|> Given a part of a lengthy markdown document, answer the following question: `{question}`. Please, follow the same format as the source document given. </s>
+<|user|>
+please ONLY respond with: {{not_found_response}}, if the context does not provide the answer </s>
+CONTEXT: {ctx} 
 
-        <|assistant|> """
+<|assistant|> """
 
     answer = llm(full_prompt)
     return answer, src
 
 
-def slow_echo(message, history):
-    ctx, src = main_get_src_ctx(message, 3)
+def slow_echo(message):
+    ctx, src = main_get_src_ctx(message)
+    import pdb; pdb.set_trace()
     ctx = remove_duplicates_preserve_order(ctx)
     ctx = '\n'.join(ctx)
     answer, src = gt_llm_answer(message, ctx, src)
     bot_response = answer.split('<|assistant|>')[1].split('</s>')[0]
-    # with open('response.txt', 'w') as f:
-    #     f.write(bot_response)
-        
+    # bot_response = bot_response.replace('<|user|>', '')
     return bot_response #
 
-
-loaded_db = load_db()
-cleaned_db = clean(loaded_db)
-
 embedding_function = baseEmbedder().embedding_function
+vectordb = Chroma(persist_directory="./vectorstore", embedding_function=embedding_function)
 retrieval_kwargs = {
     "threshold": "0.8",
     "k": 20,
     "embedder": embedding_function,
     "hybrid": True,
-    "db": cleaned_db
+    "db": vectordb
 }
 ciena_retreival = CienaRetrieval(**retrieval_kwargs)
 reranker = Reranker()
+
+
 def main():
-    
-    gr.ChatInterface(
-        slow_echo,
-        chatbot=gr.Chatbot(height=300),
-        textbox=gr.Textbox(placeholder="Ask Me any question related to BP Docs", container=False, scale=7),
-        title="BP Chatbot",
-        description="Ask Me any question related to BP Docs",
-        theme="soft",
-        # examples=["hi"],
-        cache_examples=False,
-        retry_btn=None,
-        undo_btn="Delete Previous",
-        clear_btn="Clear",
-    ).launch(server_port= 8888)
+    slow_echo("give me a table for ciena's BPO Runtime License")
+    # gr.ChatInterface(
+    #     slow_echo,
+    #     chatbot=gr.Chatbot(height=300),
+    #     textbox=gr.Textbox(placeholder="Ask Me any question related to BP Docs", container=False, scale=7),
+    #     title="BP Chatbot",
+    #     description="Ask Me any question related to BP Docs",
+    #     theme="soft",
+    #     # examples=["hi"],
+    #     cache_examples=False,
+    #     retry_btn=None,
+    #     undo_btn="Delete Previous",
+    #     clear_btn="Clear",
+    # ).launch(server_port= 8888)
 
 if __name__ == "__main__":
     main()
