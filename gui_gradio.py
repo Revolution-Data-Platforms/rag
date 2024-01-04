@@ -101,18 +101,20 @@ CONTEXT: {ctx}
     return answer, src
 
 
-def slow_echo(message):
+def slow_echo(message, history):
     ctx, src = main_get_src_ctx(message)
-    import pdb; pdb.set_trace()
+    # import pdb; pdb.set_trace()
     ctx = remove_duplicates_preserve_order(ctx)
     ctx = '\n'.join(ctx)
+    print(ctx)
     answer, src = gt_llm_answer(message, ctx, src)
     bot_response = answer.split('<|assistant|>')[1].split('</s>')[0]
-    # bot_response = bot_response.replace('<|user|>', '')
+    bot_response = bot_response.replace('x000D', ' ')
+    # print(bot_response)
     return bot_response #
 
 embedding_function = baseEmbedder().embedding_function
-vectordb = Chroma(persist_directory="./vectorstore", embedding_function=embedding_function)
+vectordb = Chroma(persist_directory="./db", embedding_function=embedding_function)
 retrieval_kwargs = {
     "threshold": "0.8",
     "k": 20,
@@ -125,20 +127,24 @@ reranker = Reranker()
 
 
 def main():
-    slow_echo("give me a table for ciena's BPO Runtime License")
-    # gr.ChatInterface(
-    #     slow_echo,
-    #     chatbot=gr.Chatbot(height=300),
-    #     textbox=gr.Textbox(placeholder="Ask Me any question related to BP Docs", container=False, scale=7),
-    #     title="BP Chatbot",
-    #     description="Ask Me any question related to BP Docs",
-    #     theme="soft",
-    #     # examples=["hi"],
-    #     cache_examples=False,
-    #     retry_btn=None,
-    #     undo_btn="Delete Previous",
-    #     clear_btn="Clear",
-    # ).launch(server_port= 8888)
+    # slow_echo("How to Activate bpfirewall Configuration Changes", None)
+    # slow_echo("give me a table for ciena's BPO Runtime License", None)
+    # slow_echo("How to Activate bpfirewall Configuration Changes", None)
+    # slow_echo("How to Activate bpfirewall Configuration Changes", None)
+    
+    gr.ChatInterface(
+        slow_echo,
+        chatbot=gr.Chatbot(height=300),
+        textbox=gr.Textbox(placeholder="Ask Me any question related to BP Docs", container=False, scale=7),
+        title="BP Chatbot",
+        description="Ask Me any question related to BP Docs",
+        theme="soft",
+        # examples=["hi"],
+        cache_examples=False,
+        retry_btn=None,
+        undo_btn="Delete Previous",
+        clear_btn="Clear",
+    ).launch(server_port= 8888)
 
 if __name__ == "__main__":
     main()
