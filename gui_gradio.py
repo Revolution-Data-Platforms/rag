@@ -100,17 +100,16 @@ def gt_llm_answer(question, ctx, src):
 
 def slow_echo(message, history):
     ctx, src = main_get_src_ctx(message)
-    # import pdb; pdb.set_trace()
     ctx = remove_duplicates_preserve_order(ctx)
     ctx = '\n'.join(ctx)
-    # print(ctx)
-    return '# Context: \n' + ctx
     answer, src = gt_llm_answer(message, ctx, src)
-    # bot_response = answer.split('<|assistant|>')[1].split('</s>')[0]
     bot_response = answer.replace('_x000D_', ' ')
     bot_response = bot_response.replace('x000D', ' ')
-    print(answer)
-    return bot_response #
+
+    ref_md = "# Source: " + src['source'] + " \npage number: " + str(src['page_number']) + '\n\n'
+    final_answer = bot_response + '\n\n' + ref_md
+
+    return final_answer #
 
 embedding_function = baseEmbedder().embedding_function
 vectordb = Chroma(persist_directory="./db", embedding_function=embedding_function)
@@ -123,7 +122,7 @@ retrieval_kwargs = {
 }
 ciena_retreival = CienaRetrieval(**retrieval_kwargs)
 reranker = Reranker()
-
+import pdb; pdb.set_trace()
 
 def main():
     # slow_echo("How to Activate bpfirewall Configuration Changes", None)

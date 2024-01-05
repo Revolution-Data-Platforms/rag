@@ -37,19 +37,15 @@ class CienaRetrieval:
         context = []
         res = self.db.get(where={"header": {"$in": headers}})
 
-        sources = {}
-
+        source = {}
+        for item in res['metadatas']:
+            source['page_number'] = item['page_number']
+            source['source'] = item['source']
+            break
+        
         for i, item in enumerate(res['metadatas']):
             cur_header = item['header']
             table_dir = os.path.dirname(item["source"])
-
-            data_dir = './data'
-            pdf_dir = os.path.basename(item["source"]).split('.')[0]
-            pdf_name = pdf_dir + '.pdf'
-            pdf_path = os.path.join(data_dir, pdf_dir, pdf_name)
-
-            if pdf_path not in sources:
-                sources[pdf_name] = pdf_path
 
             if 'Table' in item["type"] and item['table_path'] != '':
                 table_path = os.path.join(table_dir, item['table_path'])
@@ -61,5 +57,5 @@ class CienaRetrieval:
                 next_header = res['metadatas'][i+1]['header']
                 if next_header != cur_header:
                     context.append('\n\n')
-        return context, sources
+        return context, source
 
