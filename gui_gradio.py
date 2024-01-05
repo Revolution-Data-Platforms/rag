@@ -1,5 +1,6 @@
 import gradio as gr
 import os
+from pathlib import Path
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 from backend.llm.cienaLLM import Remote_LLM 
 from backend.retrieval.ciena_retreival import CienaRetrieval
@@ -105,8 +106,8 @@ def slow_echo(message, history):
     answer, src = gt_llm_answer(message, ctx, src)
     bot_response = answer.replace('_x000D_', ' ')
     bot_response = bot_response.replace('x000D', ' ')
-
-    ref_md = "# Source: " + src['source'] + " \npage number: " + str(src['page_number']) + '\n\n'
+    source = Path(src['source']).stem
+    ref_md = "# Source: " + source + " \npage number: " + str(src['page_number']) + '\n\n'
     final_answer = bot_response + '\n\n' + ref_md
 
     return final_answer #
