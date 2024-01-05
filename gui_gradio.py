@@ -104,6 +104,7 @@ def slow_echo(message, history):
     ctx = remove_duplicates_preserve_order(ctx)
     ctx = '\n'.join(ctx)
     # print(ctx)
+    return '# Context: \n' + ctx
     answer, src = gt_llm_answer(message, ctx, src)
     # bot_response = answer.split('<|assistant|>')[1].split('</s>')[0]
     bot_response = answer.replace('_x000D_', ' ')
