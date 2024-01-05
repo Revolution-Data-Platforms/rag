@@ -1,7 +1,7 @@
 import gradio as gr
 import os
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
-from backend.llm.baseLLM import Remote_LLM 
+from backend.llm.cienaLLM import Remote_LLM 
 from backend.retrieval.ciena_retreival import CienaRetrieval
 from backend.embedder.baseEmbedder import baseEmbedder
 from backend.retrieval.utils import *
@@ -82,22 +82,19 @@ def main_get_src_ctx(message):
     return context, sources
 
 def gt_llm_answer(question, ctx, src):
-    endpoint = " http://0.0.0.0:8000/answer"
-    LLM_kwargs={'max_new_tokens': 1500, 'temperature': 0.4}
+    # endpoint = " http://0.0.0.0:8000/answer"
+    # LLM_kwargs={'max_new_tokens': 1500, 'temperature': 0.4}
 
-    llm = Remote_LLM(
-        endpoint=endpoint,
-        generation_config=LLM_kwargs
-    )
-    full_prompt = f"""\
-<|system|> Given a part of a lengthy markdown document, answer the following question: `{question}`. Please, follow the same format as the source document given. </s>
-<|user|>
-please ONLY respond with: {{not_found_response}}, if the context does not provide the answer </s>
-CONTEXT: {ctx} 
+    llm = Remote_LLM()
+#     full_prompt = f"""\
+# <|system|> Given a part of a lengthy markdown document, answer the following question: `{question}`. Please, follow the same format as the source document given. </s>
+# <|user|>
+# please ONLY respond with: {{not_found_response}}, if the context does not provide the answer </s>
+# CONTEXT: {ctx} 
 
-<|assistant|> """
+# <|assistant|> """
 
-    answer = llm(full_prompt)
+    answer = llm(prompt= question, ctx= ctx)
     return answer, src
 
 
