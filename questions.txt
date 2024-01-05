@@ -10,6 +10,10 @@ Answer: page 76, source: Blue Planet UAA RHEL
 +Where can I deploy Blue Planet platform and solutions on?
 Answer: Page 7, source: BP engineering guide
 
+
+
+in the BPO Runtime Licenses table, what is the part number for NFVO?
+
 =========================================================
 
 + What are Supported OS for cloud deployment using Kubernetes platform

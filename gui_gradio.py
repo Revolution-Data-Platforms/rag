@@ -94,7 +94,7 @@ def gt_llm_answer(question, ctx, src):
 
 # <|assistant|> """
 
-    answer = llm(prompt= question, ctx= ctx)
+    answer = llm.generate(prompt= question, ctx= ctx)
     return answer, src
 
 
@@ -103,11 +103,12 @@ def slow_echo(message, history):
     # import pdb; pdb.set_trace()
     ctx = remove_duplicates_preserve_order(ctx)
     ctx = '\n'.join(ctx)
-    print(ctx)
+    # print(ctx)
     answer, src = gt_llm_answer(message, ctx, src)
-    bot_response = answer.split('<|assistant|>')[1].split('</s>')[0]
+    # bot_response = answer.split('<|assistant|>')[1].split('</s>')[0]
+    bot_response = answer.replace('_x000D_', ' ')
     bot_response = bot_response.replace('x000D', ' ')
-    # print(bot_response)
+    print(answer)
     return bot_response #
 
 embedding_function = baseEmbedder().embedding_function

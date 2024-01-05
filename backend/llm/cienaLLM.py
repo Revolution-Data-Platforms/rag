@@ -92,19 +92,16 @@ def get_user_id(jwt_token):
 #     else:
 #         raise Exception(f"Request failed with status code: {response.status_code}")
 
-class Remote_LLM(LLM):
+class Remote_LLM():
     # endpoint: str
     # generation_config: dict
 
-    @property
     def _llm_type(self) -> str:
         return "Ciena's GPT-4 Custom Remote Wrapper to LLM" 
 
-    def _call(
+    def generate(
         self,
         prompt: str,
-        stop: Optional[List[str]] = None,
-        run_manager: Optional[CallbackManagerForLLMRun] = None,
         ctx: str = "",
     ) -> str:
         
@@ -117,6 +114,9 @@ class Remote_LLM(LLM):
         "userId": str(user_id)
         }
         not_found_response = "Either the requested information is not in the Ciena's Documentation or the question is not well formed. Can you try a different prompt?"
+        system_message = """Given a part of a lengthy markdown document, if you cannot find an answer, answer the following question"""
+        
+        
         system_message = f"""\
 <|system|> Given a part of a lengthy markdown document, answer the following question: `{prompt}`. Please, follow the same format as the source document given. </s>
 <|user|>
@@ -144,9 +144,11 @@ CONTEXT: {ctx}
         response = requests.post(endpoint_url, headers=headers, json=json_payload)
         
         if response.status_code == 200:
+            print(f'success: {response.status_code}')
             response_json = response.json()
             return response_json["result"]["choices"][0]["message"]["content"]
         else:
+            print(f'failure: {response.status_code}')
             raise Exception(f"Request failed with status code: {response.status_code}")
             
             
@@ -154,8 +156,4 @@ CONTEXT: {ctx}
             # return create_completion(jwt_token, user_id, conversation_identifier, prompt)
 
     
-    @property
-    def _identifying_params(self) -> Mapping[str, Any]:
-        # """Get the identifying parameters."""
-        # return {"endpoint": self.endpoint}
-        pass
+    
