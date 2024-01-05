@@ -122,7 +122,6 @@ retrieval_kwargs = {
 }
 ciena_retreival = CienaRetrieval(**retrieval_kwargs)
 reranker = Reranker()
-import pdb; pdb.set_trace()
 
 def main():
     # slow_echo("How to Activate bpfirewall Configuration Changes", None)
