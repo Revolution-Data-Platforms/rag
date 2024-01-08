@@ -109,7 +109,7 @@ def slow_echo(message, history):
     source = Path(src['source']).stem
     ref_md = "# Source: " + source + " \npage number: " + str(src['page_number']) + '\n\n'
     final_answer = bot_response + '\n\n' + ref_md
-
+    print(ctx)
     return final_answer #
 
 embedding_function = baseEmbedder().embedding_function
@@ -142,7 +142,7 @@ def main():
         retry_btn=None,
         undo_btn="Delete Previous",
         clear_btn="Clear",
-    ).launch(server_port= 8888)
+    ).launch(server_port= 8888, server_name= "0.0.0.0")
 
 if __name__ == "__main__":
     main()
