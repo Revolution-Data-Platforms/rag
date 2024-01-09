@@ -37,7 +37,6 @@ share/python-wheels/
 MANIFEST
 
 #data
-data/
 vectorstores/
 
 
@@ -183,9 +182,8 @@ cython_debug/
 
 # Environment files
 *.env
-
 # Data
-data/
+
 vectorstores/
 
 # VS Code
