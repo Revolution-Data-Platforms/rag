@@ -77,6 +77,7 @@ def bot(history):
 
 def main_get_src_ctx(message):
     query = message
+    import pdb;pdb.set_trace()
     relevant_docs = get_relevant_docs(query)
     rel_headers = relevant_headers(relevant_docs)
     context, sources = get_context(rel_headers)
@@ -103,7 +104,6 @@ def slow_echo(message, history):
     ctx, src = main_get_src_ctx(message)
     ctx = remove_duplicates_preserve_order(ctx)
     ctx = '\n'.join(ctx)
-    import pdb;pdb.set_trace()
     print(ctx)
     # answer, src = gt_llm_answer(message, ctx, src)
     # bot_response = answer.replace('_x000D_', ' ')
@@ -129,16 +129,16 @@ reranker = Reranker()
 def main():
 
     ## UAA_AI_SDK_Handbook_ 230864_1-0.pdf
-    slow_echo("What is the AI SDK?", None)
-    slow_echo("How do I add an AI App in the AI SDK?", None)
-    slow_echo("How do I use the AI Apps Manager?", None)
+    # slow_echo("What is the AI SDK?", None)
+    # slow_echo("How do I add an AI App in the AI SDK?", None)
+    # slow_echo("How do I use the AI Apps Manager?", None)
 
-    ########### BP Engineering Guide
+    # ########### BP Engineering Guide
     slow_echo("Give me a table for ciena's BPO Runtime License", None)
-    slow_echo("In the BPO Runtime Licenses table, what is the part number for MCO?", None)
-    slow_echo("Where can I deploy Blue Planet platform and solutions?", None)
-    slow_echo(" What are Supported OS for cloud deployment using Kubernetes platform", None)
-    slow_echo("What are the Server requirements for deploying SOO/MDSO/MCO on AWS on multiple hosts?", None)
+    # slow_echo("In the BPO Runtime Licenses table, what is the part number for MCO?", None)
+    # slow_echo("Where can I deploy Blue Planet platform and solutions?", None)
+    # slow_echo(" What are Supported OS for cloud deployment using Kubernetes platform", None)
+    # slow_echo("What are the Server requirements for deploying SOO/MDSO/MCO on AWS on multiple hosts?", None)
 
     # gr.ChatInterface(
     #     slow_echo,

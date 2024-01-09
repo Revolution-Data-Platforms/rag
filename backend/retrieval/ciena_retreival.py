@@ -19,6 +19,7 @@ class CienaRetrieval:
         """Retrieve semantic results from Ciena database."""
         retriever = self.db.as_retriever(search_kwargs={'k': self.k, 'threshold': self.threshold})
         semantic_res = retriever.get_relevant_documents(query= query)
+        # import pdb; pdb.set_trace()
         return semantic_res
 
     def get_keyword_res(self, query):
