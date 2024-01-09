@@ -112,7 +112,7 @@ def slow_echo(message, history):
     # ref_md = "# Source: " + source + " \npage number: " + str(src['page_number']) + '\n\n'
     # final_answer = bot_response + '\n\n' + ref_md
     # print(ctx)
-    # return final_answer 
+    # return final_answer #
 
 embedding_function = baseEmbedder().embedding_function
 vectordb = Chroma(persist_directory="./db-uaa", embedding_function=embedding_function)
