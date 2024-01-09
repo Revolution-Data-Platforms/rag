@@ -103,17 +103,19 @@ def slow_echo(message, history):
     ctx, src = main_get_src_ctx(message)
     ctx = remove_duplicates_preserve_order(ctx)
     ctx = '\n'.join(ctx)
-    answer, src = gt_llm_answer(message, ctx, src)
-    bot_response = answer.replace('_x000D_', ' ')
-    bot_response = bot_response.replace('x000D', ' ')
-    source = Path(src['source']).stem
-    ref_md = "# Source: " + source + " \npage number: " + str(src['page_number']) + '\n\n'
-    final_answer = bot_response + '\n\n' + ref_md
+    import pdb;pdb.set_trace()
     print(ctx)
-    return final_answer #
+    # answer, src = gt_llm_answer(message, ctx, src)
+    # bot_response = answer.replace('_x000D_', ' ')
+    # bot_response = bot_response.replace('x000D', ' ')
+    # source = Path(src['source']).stem
+    # ref_md = "# Source: " + source + " \npage number: " + str(src['page_number']) + '\n\n'
+    # final_answer = bot_response + '\n\n' + ref_md
+    # print(ctx)
+    # return final_answer #
 
 embedding_function = baseEmbedder().embedding_function
-vectordb = Chroma(persist_directory="./db", embedding_function=embedding_function)
+vectordb = Chroma(persist_directory="./db-uaa", embedding_function=embedding_function)
 retrieval_kwargs = {
     "threshold": "0.8",
     "k": 20,
@@ -125,24 +127,32 @@ ciena_retreival = CienaRetrieval(**retrieval_kwargs)
 reranker = Reranker()
 
 def main():
-    # slow_echo("How to Activate bpfirewall Configuration Changes", None)
-    # slow_echo("give me a table for ciena's BPO Runtime License", None)
-    # slow_echo("How to Activate bpfirewall Configuration Changes", None)
-    # slow_echo("How to Activate bpfirewall Configuration Changes", None)
-    
-    gr.ChatInterface(
-        slow_echo,
-        chatbot=gr.Chatbot(height=300),
-        textbox=gr.Textbox(placeholder="Ask Me any question related to BP Docs", container=False, scale=7),
-        title="BP Chatbot",
-        description="Ask Me any question related to BP Docs",
-        theme="soft",
-        # examples=["hi"],
-        cache_examples=False,
-        retry_btn=None,
-        undo_btn="Delete Previous",
-        clear_btn="Clear",
-    ).launch(server_port= 8888, server_name= "0.0.0.0")
+
+    ## UAA_AI_SDK_Handbook_ 230864_1-0.pdf
+    slow_echo("What is the AI SDK?", None)
+    slow_echo("How do I add an AI App in the AI SDK?", None)
+    slow_echo("How do I use the AI Apps Manager?", None)
+
+    ########### BP Engineering Guide
+    slow_echo("Give me a table for ciena's BPO Runtime License", None)
+    slow_echo("In the BPO Runtime Licenses table, what is the part number for MCO?", None)
+    slow_echo("Where can I deploy Blue Planet platform and solutions?", None)
+    slow_echo(" What are Supported OS for cloud deployment using Kubernetes platform", None)
+    slow_echo("What are the Server requirements for deploying SOO/MDSO/MCO on AWS on multiple hosts?", None)
+
+    # gr.ChatInterface(
+    #     slow_echo,
+    #     chatbot=gr.Chatbot(height=500),
+    #     textbox=gr.Textbox(placeholder="Ask Me any question related to BP UAA Docs", container=False, scale=7),
+    #     title="BP Chatbot",
+    #     description="Ask Me any question related to BP UAA Docs",
+    #     theme="soft",
+    #     # examples=["hi"],
+    #     cache_examples=False,
+    #     retry_btn=None,
+    #     undo_btn="Delete Previous",
+    #     clear_btn="Clear"
+    # ).launch(server_port= 8888, server_name= "0.0.0.0")
 
 if __name__ == "__main__":
     main()
