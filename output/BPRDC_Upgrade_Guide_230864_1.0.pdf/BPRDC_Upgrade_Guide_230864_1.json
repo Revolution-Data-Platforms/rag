@@ -1,0 +1,4100 @@
+[
+  {
+    "header": "",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 0,
+        "type": "Title",
+        "header": ""
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 0,
+        "type": "P",
+        "header": ""
+      }
+    ]
+  },
+  {
+    "header": "Table of Contents ",
+    "content": [
+      {
+        "text": "Publication History.............................................................................................................................................................. 4 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "System Requirements ......................................................................................................................................................... 5 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[2]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Patch Install Instructions..................................................................................................................................................... 6 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[3]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Pre-requisites ................................................................................................................................................................. 7 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[4]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Upgrade with Geographical Redundancy....................................................................................................................... 8 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[5]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Updating Site for Upgrade ......................................................................................................................................... 9 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[6]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Downloading Installation Files .............................................................................................................................. 9 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[7]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Transferring the Installation Files to Host ........................................................................................................... 10 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[8]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Disabling Geographical Redundancy Configuration ............................................................................................ 12 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[9]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Activating Site B (standby) Optional.................................................................................................................... 14 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[10]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Preparing Hosts for Upgrade (on site A) .................................................................................................................. 15 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[11]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Updating the Hosts File ....................................................................................................................................... 15 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[12]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Modifying the Volume Group Name (Optional) .................................................................................................. 16 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[13]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Updating Configured Parameters........................................................................................................................ 16 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[14]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Setting Up Users (Site A) ..................................................................................................................................... 17 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[15]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Modifying System Logging Path (Optional) ......................................................................................................... 18 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[16]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Updating Site Configurations .............................................................................................................................. 19 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[17]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Upgrading UAA-RDC Platform and Solution on Site A (Active) .................................................................................... 21 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[18]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Upgrading site B and setting up geographical redundancy (Automatic Procedure) .................................................... 22 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[19]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Preparing Site B (standby) for Upgrade ................................................................................................................... 22 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[20]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Getting Site B Information for upgrade............................................................................................................... 22 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[21]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Updating Hosts File on Site A (active) ................................................................................................................. 23 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[22]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Setting Up Users of Site B (standby).................................................................................................................... 24 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[23]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Purging solutions from Site B (standby) on Pre-upgrade UAA-RDC .................................................................... 25 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[24]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Updating Site Configurations on Site B (standby) ............................................................................................... 25 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[25]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Installing Core Platform and Platform Solution for UAA-RDC 23.08 on Site B (standby) ........................................ 27 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[26]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Connecting Site A and Site B for Geographical Redundancy (automatic procedure) .............................................. 27 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[27]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Logstash Configuration (Optional) ............................................................................................................................... 28 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[28]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Creating a New Standby Site for Geographical Redundancy ....................................................................................... 30 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[29]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Cleaning up Old Georedundancy Settings ............................................................................................................... 30 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[30]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Updating Hosts File .................................................................................................................................................. 31 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[31]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Modifying the Volume Group Name........................................................................................................................ 32 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[32]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Configuring a Time Source ....................................................................................................................................... 33 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[33]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Configuring Geographical Redundancy.................................................................................................................... 35 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[34]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Configuring the Blue Planet email Service ............................................................................................................... 36 ",
+        "table_path": "",
+        "page_number": 1,
+        "type": "TOC/TOCI[35]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Modifying the ILAN NET Interface ........................................................................................................................... 37 ",
+        "table_path": "",
+        "page_number": 2,
+        "type": "TOC/TOCI[36]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Modifying the Default UAA-RDC Interface .............................................................................................................. 38 ",
+        "table_path": "",
+        "page_number": 2,
+        "type": "TOC/TOCI[37]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Specifying the External License Server .................................................................................................................... 38 ",
+        "table_path": "",
+        "page_number": 2,
+        "type": "TOC/TOCI[38]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Setting Up Users ...................................................................................................................................................... 39 ",
+        "table_path": "",
+        "page_number": 2,
+        "type": "TOC/TOCI[39]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Validating the Hosts................................................................................................................................................. 40 ",
+        "table_path": "",
+        "page_number": 2,
+        "type": "TOC/TOCI[40]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Configuring UAA-RDC Hosts on Active and Standby Sites ....................................................................................... 41 ",
+        "table_path": "",
+        "page_number": 2,
+        "type": "TOC/TOCI[41]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Installing Core Platform and Extended Platform Solution on Active and Standby Sites.......................................... 42 ",
+        "table_path": "",
+        "page_number": 2,
+        "type": "TOC/TOCI[42]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Installing UAA-RDC and Configuring Georedundancy on Active and Standby Sites (automatic procedure) ........... 42 ",
+        "table_path": "",
+        "page_number": 2,
+        "type": "TOC/TOCI[43]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Revert Override Configuration in Postgres ......................................................................................................... 43 ",
+        "table_path": "",
+        "page_number": 2,
+        "type": "TOC/TOCI[44]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Contacting Blue Planet...................................................................................................................................................... 44 ",
+        "table_path": "",
+        "page_number": 2,
+        "type": "TOC/TOCI[45]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "LEGAL NOTICES ................................................................................................................................................................. 45 ",
+        "table_path": "",
+        "page_number": 2,
+        "type": "TOC/TOCI[46]/Span/Reference",
+        "header": "Table of Contents "
+      },
+      {
+        "text": "Security......................................................................................................................................................................... 45 ",
+        "table_path": "",
+        "page_number": 2,
+        "type": "TOC/TOCI[47]/Span/Reference",
+        "header": "Table of Contents "
+      }
+    ]
+  },
+  {
+    "header": "Publication History ",
+    "content": [
+      {
+        "text": "The following table lists the 23.08.64 RDC Upgrade history. ",
+        "table_path": "",
+        "page_number": 3,
+        "type": "P[2]",
+        "header": "Publication History "
+      },
+      {
+        "text": "",
+        "table_path": "tables/fileoutpart1.xlsx",
+        "page_number": 3,
+        "type": "Table",
+        "header": "Publication History "
+      }
+    ]
+  },
+  {
+    "header": "",
+    "content": []
+  },
+  {
+    "header": "DATE ",
+    "content": []
+  },
+  {
+    "header": "",
+    "content": []
+  },
+  {
+    "header": "VERSION ",
+    "content": []
+  },
+  {
+    "header": "",
+    "content": []
+  },
+  {
+    "header": "NOTES ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 3,
+        "type": "Table/TR[2]/TD",
+        "header": "NOTES "
+      },
+      {
+        "text": "21-Nov-2023 ",
+        "table_path": "",
+        "page_number": 3,
+        "type": "Table/TR[2]/TD/P",
+        "header": "NOTES "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 3,
+        "type": "Table/TR[2]/TD[2]",
+        "header": "NOTES "
+      },
+      {
+        "text": "1.0 ",
+        "table_path": "",
+        "page_number": 3,
+        "type": "Table/TR[2]/TD[2]/P",
+        "header": "NOTES "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 3,
+        "type": "Table/TR[2]/TD[3]",
+        "header": "NOTES "
+      },
+      {
+        "text": "Maintenance Release 23.08.64 ",
+        "table_path": "",
+        "page_number": 3,
+        "type": "Table/TR[2]/TD[3]/P",
+        "header": "NOTES "
+      }
+    ]
+  },
+  {
+    "header": "System Requirements ",
+    "content": [
+      {
+        "text": "UAA-RDC supports the following versions of Operating Systems: ",
+        "table_path": "",
+        "page_number": 4,
+        "type": "P[3]",
+        "header": "System Requirements "
+      },
+      {
+        "text": "",
+        "table_path": "tables/fileoutpart3.xlsx",
+        "page_number": 4,
+        "type": "Table[2]",
+        "header": "System Requirements "
+      }
+    ]
+  },
+  {
+    "header": "",
+    "content": []
+  },
+  {
+    "header": "UAA-RDC version ",
+    "content": []
+  },
+  {
+    "header": "",
+    "content": []
+  },
+  {
+    "header": "Supported OS and versions ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 4,
+        "type": "Table[2]/TR[2]/TD",
+        "header": "Supported OS and versions "
+      },
+      {
+        "text": "Upgrade from 23.04.xx, ",
+        "table_path": "",
+        "page_number": 4,
+        "type": "Table[2]/TR[2]/TD/P",
+        "header": "Supported OS and versions "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 4,
+        "type": "Table[2]/TR[2]/TD[2]",
+        "header": "Supported OS and versions "
+      },
+      {
+        "text": "CentOS versions ",
+        "table_path": "",
+        "page_number": 4,
+        "type": "Table[2]/TR[2]/TD[2]/P",
+        "header": "Supported OS and versions "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 4,
+        "type": "Table[2]/TR[2]/TD[3]",
+        "header": "Supported OS and versions "
+      },
+      {
+        "text": "RHEL versions ",
+        "table_path": "",
+        "page_number": 4,
+        "type": "Table[2]/TR[2]/TD[3]/P",
+        "header": "Supported OS and versions "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 4,
+        "type": "Table[2]/TR[2]/TD[4]",
+        "header": "Supported OS and versions "
+      },
+      {
+        "text": "Oracle Enterprise Linux versions ",
+        "table_path": "",
+        "page_number": 4,
+        "type": "Table[2]/TR[2]/TD[4]/P",
+        "header": "Supported OS and versions "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 4,
+        "type": "Table[2]/TR[3]/TD",
+        "header": "Supported OS and versions "
+      },
+      {
+        "text": "23.08.xx to 23.08.64 ",
+        "table_path": "",
+        "page_number": 4,
+        "type": "Table[2]/TR[3]/TD/P",
+        "header": "Supported OS and versions "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 4,
+        "type": "Table[2]/TR[3]/TD[2]",
+        "header": "Supported OS and versions "
+      },
+      {
+        "text": "CentOS 7.9 ",
+        "table_path": "",
+        "page_number": 4,
+        "type": "Table[2]/TR[3]/TD[2]/P",
+        "header": "Supported OS and versions "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 4,
+        "type": "Table[2]/TR[3]/TD[3]",
+        "header": "Supported OS and versions "
+      },
+      {
+        "text": "RHEL 7.9 ",
+        "table_path": "",
+        "page_number": 4,
+        "type": "Table[2]/TR[3]/TD[3]/P",
+        "header": "Supported OS and versions "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 4,
+        "type": "Table[2]/TR[3]/TD[4]",
+        "header": "Supported OS and versions "
+      },
+      {
+        "text": "OEL 7.9 ",
+        "table_path": "",
+        "page_number": 4,
+        "type": "Table[2]/TR[3]/TD[4]/P",
+        "header": "Supported OS and versions "
+      }
+    ]
+  },
+  {
+    "header": "Patch Install Instructions (Non-GR) ",
+    "content": [
+      {
+        "text": "The upgrade of RDC is not directly supported from the previous versions. User will require to un-deploy the currently installed RDC from their servers and install the latest version. ",
+        "table_path": "",
+        "page_number": 5,
+        "type": "P[4]",
+        "header": "Patch Install Instructions (Non-GR) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 5,
+        "type": "P[5]",
+        "header": "Patch Install Instructions (Non-GR) "
+      },
+      {
+        "text": "1. ",
+        "table_path": "",
+        "page_number": 5,
+        "type": "L/LI/Lbl",
+        "header": "Patch Install Instructions (Non-GR) "
+      },
+      {
+        "text": "To un",
+        "table_path": "",
+        "page_number": 5,
+        "type": "L/LI/LBody/Span",
+        "header": "Patch Install Instructions (Non-GR) "
+      },
+      {
+        "text": "-",
+        "table_path": "",
+        "page_number": 5,
+        "type": "L/LI/LBody",
+        "header": "Patch Install Instructions (Non-GR) "
+      },
+      {
+        "text": "deploy the currently installed RDC on the servers, ",
+        "table_path": "",
+        "page_number": 5,
+        "type": "L/LI/LBody/Span[2]",
+        "header": "Patch Install Instructions (Non-GR) "
+      },
+      {
+        "text": "login to LWDC/RDC server as bpadmin user and execute the following command to un-deploy RDC solution ",
+        "table_path": "",
+        "page_number": 5,
+        "type": "L/LI/LBody",
+        "header": "Patch Install Instructions (Non-GR) "
+      },
+      {
+        "text": "– ",
+        "table_path": "",
+        "page_number": 5,
+        "type": "L/LI/LBody/Span[3]",
+        "header": "Patch Install Instructions (Non-GR) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 5,
+        "type": "L/LI/LBody",
+        "header": "Patch Install Instructions (Non-GR) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 5,
+        "type": "L/LI",
+        "header": "Patch Install Instructions (Non-GR) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 5,
+        "type": "L",
+        "header": "Patch Install Instructions (Non-GR) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 5,
+        "type": "P[6]",
+        "header": "Patch Install Instructions (Non-GR) "
+      },
+      {
+        "text": "The above command will un-deploy all the containers from the LWDC/RDC server. ",
+        "table_path": "",
+        "page_number": 5,
+        "type": "P[7]",
+        "header": "Patch Install Instructions (Non-GR) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 5,
+        "type": "L[2]",
+        "header": "Patch Install Instructions (Non-GR) "
+      }
+    ]
+  },
+  {
+    "header": "Patch Install Instructions (GR) ",
+    "content": []
+  },
+  {
+    "header": "Pre-requisites ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 6,
+        "type": "L[3]",
+        "header": "Pre-requisites "
+      }
+    ]
+  },
+  {
+    "header": "Upgrade with Geographical Redundancy ",
+    "content": [
+      {
+        "text": "To upgrade the single-host or multi-host deployment with geographic redundancy, you need to perform the following procedures - ",
+        "table_path": "",
+        "page_number": 7,
+        "type": "P[8]",
+        "header": "Upgrade with Geographical Redundancy "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 7,
+        "type": "L[4]",
+        "header": "Upgrade with Geographical Redundancy "
+      }
+    ]
+  },
+  {
+    "header": "Updating Site for Upgrade ",
+    "content": [
+      {
+        "text": "You need to update the site and bring it to the state from where you can start the upgrade. Following are the steps to update site. ",
+        "table_path": "",
+        "page_number": 8,
+        "type": "P[9]",
+        "header": "Updating Site for Upgrade "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 8,
+        "type": "L[5]",
+        "header": "Updating Site for Upgrade "
+      }
+    ]
+  },
+  {
+    "header": "Downloading Installation Files ",
+    "content": [
+      {
+        "text": "To install the UAA-RDC 23.08 platform and solutions, you need the following files: ",
+        "table_path": "",
+        "page_number": 8,
+        "type": "P[10]",
+        "header": "Downloading Installation Files "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 8,
+        "type": "L[6]",
+        "header": "Downloading Installation Files "
+      },
+      {
+        "text": "Before you begin, verify that you have: ",
+        "table_path": "",
+        "page_number": 8,
+        "type": "P[11]",
+        "header": "Downloading Installation Files "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 8,
+        "type": "L[7]",
+        "header": "Downloading Installation Files "
+      }
+    ]
+  },
+  {
+    "header": "To download files ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 8,
+        "type": "L[8]",
+        "header": "To download files "
+      }
+    ]
+  },
+  {
+    "header": "Transferring the Installation Files to Host ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 9,
+        "type": "P[12]",
+        "header": "Transferring the Installation Files to Host "
+      }
+    ]
+  },
+  {
+    "header": "NOTE ",
+    "content": [
+      {
+        "text": "This procedure assumes you extracted the bpi installer and the upgrade tar file into the directory listed above. If you use other directories for installation, modify the steps to point to your directories, as required. ",
+        "table_path": "",
+        "page_number": 9,
+        "type": "P[13]",
+        "header": "NOTE "
+      }
+    ]
+  },
+  {
+    "header": "",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 9,
+        "type": "L[9]",
+        "header": ""
+      },
+      {
+        "text": "bash bpi-23.08-xx.sh ",
+        "table_path": "",
+        "page_number": 10,
+        "type": "P[14]",
+        "header": ""
+      },
+      {
+        "text": "The extraction creates the bpi directory for the latest bpi version. ",
+        "table_path": "",
+        "page_number": 10,
+        "type": "P[15]",
+        "header": ""
+      }
+    ]
+  },
+  {
+    "header": "Disabling Geographical Redundancy Configuration ",
+    "content": [
+      {
+        "text": "To prepare for UAA-RDC upgrade, you need to disable geographical redundancy (GR) between site A (active) and site B (standby). ",
+        "table_path": "",
+        "page_number": 11,
+        "type": "P[16]",
+        "header": "Disabling Geographical Redundancy Configuration "
+      },
+      {
+        "text": "Use this procedure to disable GR. This procedure includes following tasks: ",
+        "table_path": "",
+        "page_number": 11,
+        "type": "P[17]",
+        "header": "Disabling Geographical Redundancy Configuration "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 11,
+        "type": "L[10]",
+        "header": "Disabling Geographical Redundancy Configuration "
+      }
+    ]
+  },
+  {
+    "header": "Steps ",
+    "content": [
+      {
+        "text": "1. ",
+        "table_path": "",
+        "page_number": 11,
+        "type": "L[11]/LI/Lbl",
+        "header": "Steps "
+      },
+      {
+        "text": "Log in to host 0 of site A (active) as bpadmin ",
+        "table_path": "",
+        "page_number": 11,
+        "type": "L[11]/LI/LBody/Span",
+        "header": "Steps "
+      },
+      {
+        "text": "(Do not use the site IP; use the IP address of host 0)",
+        "table_path": "",
+        "page_number": 11,
+        "type": "L[11]/LI/LBody",
+        "header": "Steps "
+      },
+      {
+        "text": ". ",
+        "table_path": "",
+        "page_number": 11,
+        "type": "L[11]/LI/LBody/Span[2]",
+        "header": "Steps "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 11,
+        "type": "L[11]/LI/LBody",
+        "header": "Steps "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 11,
+        "type": "L[11]/LI",
+        "header": "Steps "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 11,
+        "type": "L[11]",
+        "header": "Steps "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 11,
+        "type": "P[18]",
+        "header": "Steps "
+      },
+      {
+        "text": "cd /home/bpadmin/bpi ",
+        "table_path": "",
+        "page_number": 11,
+        "type": "P[19]",
+        "header": "Steps "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 11,
+        "type": "P[20]",
+        "header": "Steps "
+      },
+      {
+        "text": "",
+        "table_path": "figures/fileoutpart8.png",
+        "page_number": 11,
+        "type": "Figure[2]",
+        "header": "Steps "
+      },
+      {
+        "text": "nohup ./bpi --remove-geored <siteB_IP_address> --playbook-args='-e geo_user=<user> -e geo_password=<password>' & ",
+        "table_path": "",
+        "page_number": 11,
+        "type": "Figure[2]",
+        "header": "Steps "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 11,
+        "type": "P[21]",
+        "header": "Steps "
+      },
+      {
+        "text": "",
+        "table_path": "figures/fileoutpart9.png",
+        "page_number": 11,
+        "type": "Figure[3]",
+        "header": "Steps "
+      },
+      {
+        "text": "curl -sSk -X POST https://<siteA_IP_address>/tron/api/v1/tokens -d 'username=<username>&password=<password>' | python -m json.tool ",
+        "table_path": "",
+        "page_number": 11,
+        "type": "Figure[3]",
+        "header": "Steps "
+      }
+    ]
+  },
+  {
+    "header": "Example ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "figures/fileoutpart10.png",
+        "page_number": 11,
+        "type": "Figure[4]",
+        "header": "Example "
+      },
+      {
+        "text": "curl -sSk -X POST https://localhost/tron/api/v1/tokens -d 'username=admin&password=adminpw' | python -m json.tool ",
+        "table_path": "",
+        "page_number": 11,
+        "type": "Figure[4]",
+        "header": "Example "
+      },
+      {
+        "text": "Record the token value. The token value is 825697e4c6475d0887e1 in the following example. ",
+        "table_path": "",
+        "page_number": 11,
+        "type": "P[22]",
+        "header": "Example "
+      },
+      {
+        "text": "",
+        "table_path": "figures/fileoutpart11.png",
+        "page_number": 11,
+        "type": "Figure[5]",
+        "header": "Example "
+      },
+      {
+        "text": {
+          "createdTime": "2021.12-24T05:47:27Z",
+          "failedLoginAttempts": 0,
+          "inactiveExpirationTime": null,
+          "isSuccessful": true,
+          "lastSuccessIpAddress": "172.16.0.1",
+          "lastSuccessLogin": "2021.12-24 05:45:00+00:00",
+          "loginDetail": {
+            "ipAddress": "172.16.0.1",
+            "sessionId": "ccd8879c-4264-4606-bb80-49e210c5c5fe",
+            "sessionType": "Machine",
+            "time": "2021.12-24T05:47:27Z",
+            "userAgent": "curl/7.29.0"
+          },
+          "timeout": 86400,
+          "token": "825697e4c6475d0887e1",
+          "user": "7a9ca679-59f3-4c6e-a31f-1a505cf7218a",
+          "userTenantUuid": "056c8d72-2e14-49e5-85c7-5e65ec086567"
+        },
+        "table_path": "",
+        "page_number": 11,
+        "type": "Figure[5]",
+        "header": "Example "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 12,
+        "type": "P[23]",
+        "header": "Example "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 12,
+        "type": "P[24]",
+        "header": "Example "
+      },
+      {
+        "text": "Example ",
+        "table_path": "",
+        "page_number": 12,
+        "type": "P[25]",
+        "header": "Example "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 12,
+        "type": "P[26]",
+        "header": "Example "
+      },
+      {
+        "text": "The system provides the configured remote site and other information. ",
+        "table_path": "",
+        "page_number": 12,
+        "type": "P[27]",
+        "header": "Example "
+      },
+      {
+        "text": "",
+        "table_path": "figures/fileoutpart12.png",
+        "page_number": 12,
+        "type": "Figure[6]",
+        "header": "Example "
+      },
+      {
+        "text": {
+          "message": "Listing all currently configured sites",
+          "remote_sites": null,
+          "success": true
+        },
+        "table_path": "",
+        "page_number": 12,
+        "type": "Figure[6]",
+        "header": "Example "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 12,
+        "type": "P[28]",
+        "header": "Example "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 12,
+        "type": "P[29]",
+        "header": "Example "
+      },
+      {
+        "text": "7. ",
+        "table_path": "",
+        "page_number": 12,
+        "type": "L[12]/LI/Lbl",
+        "header": "Example "
+      },
+      {
+        "text": "Repeat step 5 to verify the configured remote site again. If the response is null, proceed to Activating site B (standby). ",
+        "table_path": "",
+        "page_number": 12,
+        "type": "L[12]/LI/LBody",
+        "header": "Example "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 12,
+        "type": "L[12]/LI",
+        "header": "Example "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 12,
+        "type": "L[12]",
+        "header": "Example "
+      }
+    ]
+  },
+  {
+    "header": "Activating Site B (standby) Optional ",
+    "content": [
+      {
+        "text": "Before you activate site B (standby), ensure you complete the following procedure: Disabling geographical redundancy configuration. ",
+        "table_path": "",
+        "page_number": 13,
+        "type": "P[30]",
+        "header": "Activating Site B (standby) Optional "
+      }
+    ]
+  },
+  {
+    "header": "Steps ",
+    "content": [
+      {
+        "text": "To activate site B (standby) using Blue Planet UI, use the following: ",
+        "table_path": "",
+        "page_number": 13,
+        "type": "P[31]",
+        "header": "Steps "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 13,
+        "type": "L[13]",
+        "header": "Steps "
+      }
+    ]
+  },
+  {
+    "header": "Preparing Hosts for Upgrade (on site A) ",
+    "content": [
+      {
+        "text": "This section provides information to prepare the hosts for performing upgrade. To prepare the hosts for upgrade, you need to perform the following procedures: ",
+        "table_path": "",
+        "page_number": 14,
+        "type": "P[32]",
+        "header": "Preparing Hosts for Upgrade (on site A) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 14,
+        "type": "L[14]",
+        "header": "Preparing Hosts for Upgrade (on site A) "
+      }
+    ]
+  },
+  {
+    "header": "Updating the Hosts File ",
+    "content": [
+      {
+        "text": "Perform the following procedure to update the hosts file parameters as per the existing, pre-upgrade UAA-RDC setup. ",
+        "table_path": "",
+        "page_number": 14,
+        "type": "P[33]",
+        "header": "Updating the Hosts File "
+      }
+    ]
+  },
+  {
+    "header": "Requirements ",
+    "content": [
+      {
+        "text": "Transferring the installation files to host",
+        "table_path": "",
+        "page_number": 14,
+        "type": "P[34]",
+        "header": "Requirements "
+      }
+    ]
+  },
+  {
+    "header": "Steps ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 14,
+        "type": "L[15]",
+        "header": "Steps "
+      },
+      {
+        "text": "get-site-name ",
+        "table_path": "",
+        "page_number": 14,
+        "type": "P[35]",
+        "header": "Steps "
+      }
+    ]
+  },
+  {
+    "header": "Modifying the Volume Group Name (Optional) ",
+    "content": [
+      {
+        "text": "Blue Planet recommends using unique names for volume group that can be recognized and avoid name conflicts across multiple virtual groups. ",
+        "table_path": "",
+        "page_number": 15,
+        "type": "P[36]",
+        "header": "Modifying the Volume Group Name (Optional) "
+      },
+      {
+        "text": "Complete this procedure to modify the volume group name where the unallocated physical extents space is left free for UAA-RDC to create and configure the Docker thin pool. This procedure is needed if you want to change the default values. ",
+        "table_path": "",
+        "page_number": 15,
+        "type": "P[37]",
+        "header": "Modifying the Volume Group Name (Optional) "
+      },
+      {
+        "text": "Before you begin, verify that you know the name of the volume group where the unallocated physical extents space is available for UAA-RDC to create and configure the Docker thin pool. ",
+        "table_path": "",
+        "page_number": 15,
+        "type": "P[38]",
+        "header": "Modifying the Volume Group Name (Optional) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 15,
+        "type": "P[39]",
+        "header": "Modifying the Volume Group Name (Optional) "
+      },
+      {
+        "text": "To modify the volume group name ",
+        "table_path": "",
+        "page_number": 15,
+        "type": "P[40]",
+        "header": "Modifying the Volume Group Name (Optional) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 15,
+        "type": "L[16]",
+        "header": "Modifying the Volume Group Name (Optional) "
+      }
+    ]
+  },
+  {
+    "header": "Updating Configured Parameters ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 15,
+        "type": "P[41]",
+        "header": "Updating Configured Parameters "
+      }
+    ]
+  },
+  {
+    "header": "Requirements ",
+    "content": [
+      {
+        "text": "Before you start updating the configured parameters, ensure you complete the following procedures: ",
+        "table_path": "",
+        "page_number": 15,
+        "type": "P[42]",
+        "header": "Requirements "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 15,
+        "type": "L[17]",
+        "header": "Requirements "
+      }
+    ]
+  },
+  {
+    "header": "Steps ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 15,
+        "type": "L[18]",
+        "header": "Steps "
+      }
+    ]
+  },
+  {
+    "header": "NOTE ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 16,
+        "type": "P[43]",
+        "header": "NOTE "
+      },
+      {
+        "text": "e. ",
+        "table_path": "",
+        "page_number": 16,
+        "type": "L[19]/LI/Lbl",
+        "header": "NOTE "
+      },
+      {
+        "text": "Save the file and exit. ",
+        "table_path": "",
+        "page_number": 16,
+        "type": "L[19]/LI/LBody",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 16,
+        "type": "L[19]/LI",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 16,
+        "type": "L[19]",
+        "header": "NOTE "
+      }
+    ]
+  },
+  {
+    "header": "Setting Up Users (Site A) ",
+    "content": [
+      {
+        "text": "This procedure performs the following tasks: ",
+        "table_path": "",
+        "page_number": 16,
+        "type": "P[44]",
+        "header": "Setting Up Users (Site A) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 16,
+        "type": "L[20]",
+        "header": "Setting Up Users (Site A) "
+      }
+    ]
+  },
+  {
+    "header": "Requirements ",
+    "content": [
+      {
+        "text": "Before setting up the users, ensure you complete the following: ",
+        "table_path": "",
+        "page_number": 16,
+        "type": "P[45]",
+        "header": "Requirements "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 16,
+        "type": "L[21]",
+        "header": "Requirements "
+      }
+    ]
+  },
+  {
+    "header": "Steps ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 16,
+        "type": "L[22]",
+        "header": "Steps "
+      }
+    ]
+  },
+  {
+    "header": "Modifying System Logging Path (Optional) ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 17,
+        "type": "P[46]",
+        "header": "Modifying System Logging Path (Optional) "
+      }
+    ]
+  },
+  {
+    "header": "Steps ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 17,
+        "type": "L[23]",
+        "header": "Steps "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 17,
+        "type": "P[47]",
+        "header": "Steps "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 17,
+        "type": "L[24]",
+        "header": "Steps "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 17,
+        "type": "P[48]",
+        "header": "Steps "
+      }
+    ]
+  },
+  {
+    "header": "Updating Site Configurations ",
+    "content": [
+      {
+        "text": "This procedure describes how to install the Ciena Linux system bundle, PostgreSQL and license files update on an existing, pre-upgraded setup. ",
+        "table_path": "",
+        "page_number": 18,
+        "type": "P[49]",
+        "header": "Updating Site Configurations "
+      }
+    ]
+  },
+  {
+    "header": "Requirements ",
+    "content": [
+      {
+        "text": "Before you start to install the Ciena Linux system bundle, complete the following procedures: ",
+        "table_path": "",
+        "page_number": 18,
+        "type": "P[50]",
+        "header": "Requirements "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 18,
+        "type": "L[25]",
+        "header": "Requirements "
+      }
+    ]
+  },
+  {
+    "header": "Steps ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 18,
+        "type": "L[26]",
+        "header": "Steps "
+      },
+      {
+        "text": "sudo su - ",
+        "table_path": "",
+        "page_number": 18,
+        "type": "P[51]",
+        "header": "Steps "
+      },
+      {
+        "text": "bpssh checkOSversion ",
+        "table_path": "",
+        "page_number": 18,
+        "type": "P[52]",
+        "header": "Steps "
+      },
+      {
+        "text": "Example system output: ",
+        "table_path": "",
+        "page_number": 18,
+        "type": "P[53]",
+        "header": "Steps "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 18,
+        "type": "P[54]",
+        "header": "Steps "
+      },
+      {
+        "text": "Base Operating System Version: Red Hat Enterprise Linux Server release 7.9 (Maipo) Oracle Linux Server release 7.9 64-bit Operating System Bundle: 2020.35.0 host-1 ec: 0 Base Operating System Version: Red Hat Enterprise Linux Server release 7.9 (Maipo) Oracle Linux Server release 7.9 64-bit Operating System Bundle: 2020.35.0 host-2 ec: 0 Base Operating System Version: Red Hat Enterprise Linux Server release 7.9 (Maipo) ",
+        "table_path": "",
+        "page_number": 18,
+        "type": "P[55]",
+        "header": "Steps "
+      },
+      {
+        "text": "Oracle Linux Server release 7.9 64-bit ",
+        "table_path": "",
+        "page_number": 18,
+        "type": "P[56]",
+        "header": "Steps "
+      },
+      {
+        "text": "Operating System Bundle: 2020.35.0 ",
+        "table_path": "",
+        "page_number": 19,
+        "type": "P[57]",
+        "header": "Steps "
+      },
+      {
+        "text": "8. Verify license server configuration. It must have the same server defined earlier. ",
+        "table_path": "",
+        "page_number": 19,
+        "type": "P[58]",
+        "header": "Steps "
+      },
+      {
+        "text": "sudo su - ",
+        "table_path": "",
+        "page_number": 19,
+        "type": "P[59]",
+        "header": "Steps "
+      },
+      {
+        "text": "bpssh cat /etc/bp2/solutionmanager/nbis.d/licsvr.yaml ",
+        "table_path": "",
+        "page_number": 19,
+        "type": "P[60]",
+        "header": "Steps "
+      },
+      {
+        "text": "Example system output: ",
+        "table_path": "",
+        "page_number": 19,
+        "type": "P[61]",
+        "header": "Steps "
+      },
+      {
+        "text": "",
+        "table_path": "figures/fileoutpart19.png",
+        "page_number": 19,
+        "type": "Figure[7]",
+        "header": "Steps "
+      },
+      {
+        "text": "root@bp-prod-test-1:~# bpssh cat /etc/bp2/solutionmanager/nbis.d/licsvr.yaml host-0 ec: 0 url: ",
+        "table_path": "",
+        "page_number": 19,
+        "type": "Figure[7]",
+        "header": "Steps "
+      },
+      {
+        "text": "https://onxv0288.ott.ciena.com:7071 ",
+        "table_path": "",
+        "page_number": 19,
+        "type": "Figure[7]/Reference",
+        "header": "Steps "
+      },
+      {
+        "text": "ip: onxv0288.ott.ciena.com port: 7071 publish: true # Created by bpi --site host-1 ec: 0 url: ",
+        "table_path": "",
+        "page_number": 19,
+        "type": "Figure[7]",
+        "header": "Steps "
+      },
+      {
+        "text": "https://onxv0288.ott.ciena.com:7071 ",
+        "table_path": "",
+        "page_number": 19,
+        "type": "Figure[7]/Reference[2]",
+        "header": "Steps "
+      },
+      {
+        "text": "ip: onxv0288.ott.ciena.com port: 7071 publish: true # Created by bpi --site host-2 ec: 0 url: ",
+        "table_path": "",
+        "page_number": 19,
+        "type": "Figure[7]",
+        "header": "Steps "
+      },
+      {
+        "text": "https://onxv0288.ott.ciena.com:7071 ",
+        "table_path": "",
+        "page_number": 19,
+        "type": "Figure[7]/Reference[3]",
+        "header": "Steps "
+      },
+      {
+        "text": "ip: onxv0288.ott.ciena.com port: 7071 publish: true # Created by bpi --site ",
+        "table_path": "",
+        "page_number": 19,
+        "type": "Figure[7]",
+        "header": "Steps "
+      }
+    ]
+  },
+  {
+    "header": "Upgrading UAA-RDC Platform and Solution on Site A (Active) ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 20,
+        "type": "P[62]",
+        "header": "Upgrading UAA-RDC Platform and Solution on Site A (Active) "
+      },
+      {
+        "text": "",
+        "table_path": "tables/fileoutpart20.xlsx",
+        "page_number": 20,
+        "type": "Table[3]",
+        "header": "Upgrading UAA-RDC Platform and Solution on Site A (Active) "
+      }
+    ]
+  },
+  {
+    "header": "",
+    "content": []
+  },
+  {
+    "header": "UAA-RDC SOLUTION ",
+    "content": []
+  },
+  {
+    "header": "",
+    "content": []
+  },
+  {
+    "header": "LINEUP FILE NAME (SINGLE HOST) ",
+    "content": []
+  },
+  {
+    "header": "",
+    "content": []
+  },
+  {
+    "header": "LINEUP FILE NAME (MULTI HOST) ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 20,
+        "type": "Table[3]/TR[2]/TD",
+        "header": "LINEUP FILE NAME (MULTI HOST) "
+      },
+      {
+        "text": "Remote Data Collector ",
+        "table_path": "",
+        "page_number": 20,
+        "type": "Table[3]/TR[2]/TD/P",
+        "header": "LINEUP FILE NAME (MULTI HOST) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 20,
+        "type": "Table[3]/TR[2]/TD[2]",
+        "header": "LINEUP FILE NAME (MULTI HOST) "
+      },
+      {
+        "text": "lineup-uaa-remote-lwdc-single-rhel.yml ",
+        "table_path": "",
+        "page_number": 20,
+        "type": "Table[3]/TR[2]/TD[2]/P",
+        "header": "LINEUP FILE NAME (MULTI HOST) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 20,
+        "type": "Table[3]/TR[2]/TD[3]",
+        "header": "LINEUP FILE NAME (MULTI HOST) "
+      },
+      {
+        "text": "lineup-uaa-remote-lwdc-multi-rhel.yml ",
+        "table_path": "",
+        "page_number": 20,
+        "type": "Table[3]/TR[2]/TD[3]/P",
+        "header": "LINEUP FILE NAME (MULTI HOST) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 20,
+        "type": "L[27]",
+        "header": "LINEUP FILE NAME (MULTI HOST) "
+      }
+    ]
+  },
+  {
+    "header": "NOTE ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 20,
+        "type": "P[63]",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 20,
+        "type": "L[28]",
+        "header": "NOTE "
+      }
+    ]
+  },
+  {
+    "header": "Upgrading site B and setting up geographical redundancy (Automatic Procedure) ",
+    "content": [
+      {
+        "text": "This section describes how to upgrade site B (standby) and set up a post-upgrade geographical redundancy (GR) between site A and site B. ",
+        "table_path": "",
+        "page_number": 21,
+        "type": "P[64]",
+        "header": "Upgrading site B and setting up geographical redundancy (Automatic Procedure) "
+      },
+      {
+        "text": "To upgrade site B (standby) and set up a post-upgrade GR between site A and site B, you need to perform the following procedures - ",
+        "table_path": "",
+        "page_number": 21,
+        "type": "P[65]",
+        "header": "Upgrading site B and setting up geographical redundancy (Automatic Procedure) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 21,
+        "type": "L[29]",
+        "header": "Upgrading site B and setting up geographical redundancy (Automatic Procedure) "
+      }
+    ]
+  },
+  {
+    "header": "Preparing Site B (standby) for Upgrade ",
+    "content": [
+      {
+        "text": "This section provides a procedure to prepare site B (standby) for upgrade. You need to perform the following procedures - ",
+        "table_path": "",
+        "page_number": 21,
+        "type": "P[66]",
+        "header": "Preparing Site B (standby) for Upgrade "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 21,
+        "type": "L[30]",
+        "header": "Preparing Site B (standby) for Upgrade "
+      },
+      {
+        "text": "Before you prepare site B (standby) for upgrade, ensure you complete following procedures on site A. ",
+        "table_path": "",
+        "page_number": 21,
+        "type": "P[67]",
+        "header": "Preparing Site B (standby) for Upgrade "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 21,
+        "type": "L[31]",
+        "header": "Preparing Site B (standby) for Upgrade "
+      }
+    ]
+  },
+  {
+    "header": "Getting Site B Information for upgrade ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 21,
+        "type": "L[32]",
+        "header": "Getting Site B Information for upgrade "
+      },
+      {
+        "text": "get-ilannet ",
+        "table_path": "",
+        "page_number": 22,
+        "type": "P[68]",
+        "header": "Getting Site B Information for upgrade "
+      }
+    ]
+  },
+  {
+    "header": "Updating Hosts File on Site A (active) ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 22,
+        "type": "L[33]",
+        "header": "Updating Hosts File on Site A (active) "
+      },
+      {
+        "text": "Following is an example of hosts file of multi-host setup on host0 of site A ",
+        "table_path": "",
+        "page_number": 22,
+        "type": "P[69]",
+        "header": "Updating Hosts File on Site A (active) "
+      },
+      {
+        "text": "",
+        "table_path": "figures/fileoutpart29.png",
+        "page_number": 23,
+        "type": "Figure[8]",
+        "header": "Updating Hosts File on Site A (active) "
+      }
+    ]
+  },
+  {
+    "header": "Setting Up Users of Site B (standby) ",
+    "content": [
+      {
+        "text": "This procedure performs the following tasks - ",
+        "table_path": "",
+        "page_number": 23,
+        "type": "P[70]",
+        "header": "Setting Up Users of Site B (standby) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 23,
+        "type": "L[34]",
+        "header": "Setting Up Users of Site B (standby) "
+      },
+      {
+        "text": "Before setting up the users, ensure you complete the following - ",
+        "table_path": "",
+        "page_number": 23,
+        "type": "P[71]",
+        "header": "Setting Up Users of Site B (standby) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 23,
+        "type": "L[35]",
+        "header": "Setting Up Users of Site B (standby) "
+      }
+    ]
+  },
+  {
+    "header": "Steps ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 24,
+        "type": "L[36]",
+        "header": "Steps "
+      },
+      {
+        "text": "You will purge solutions from site B (standby) in the next procedure. ",
+        "table_path": "",
+        "page_number": 24,
+        "type": "P[72]",
+        "header": "Steps "
+      }
+    ]
+  },
+  {
+    "header": "Purging solutions from Site B (standby) on Pre-upgrade UAA-RDC ",
+    "content": [
+      {
+        "text": "Before you purge the solutions from site B (standby), ensure you complete following procedure: Setting up users of site B (standby). ",
+        "table_path": "",
+        "page_number": 24,
+        "type": "P[73]",
+        "header": "Purging solutions from Site B (standby) on Pre-upgrade UAA-RDC "
+      }
+    ]
+  },
+  {
+    "header": "Steps ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 24,
+        "type": "L[37]",
+        "header": "Steps "
+      },
+      {
+        "text": "nohup ./bpi --utility  playbooks/solution-undeploypurge.yml --playbook-args='--limit standby_cluster' & ",
+        "table_path": "",
+        "page_number": 24,
+        "type": "P[74]",
+        "header": "Steps "
+      },
+      {
+        "text": "This raises a query to the solution manager for all running solutions to purge solutions from the site and to remove related images and host volumes. ",
+        "table_path": "",
+        "page_number": 24,
+        "type": "P[75]",
+        "header": "Steps "
+      }
+    ]
+  },
+  {
+    "header": "Updating Site Configurations on Site B (standby) ",
+    "content": [
+      {
+        "text": "Before you start to install the Ciena Linux system bundle, complete the following procedures: ",
+        "table_path": "",
+        "page_number": 24,
+        "type": "P[76]",
+        "header": "Updating Site Configurations on Site B (standby) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 24,
+        "type": "L[38]",
+        "header": "Updating Site Configurations on Site B (standby) "
+      }
+    ]
+  },
+  {
+    "header": "Steps ",
+    "content": [
+      {
+        "text": "To update site configurations on site B (standby): ",
+        "table_path": "",
+        "page_number": 24,
+        "type": "P[77]",
+        "header": "Steps "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 24,
+        "type": "L[39]",
+        "header": "Steps "
+      },
+      {
+        "text": "nohup ./bpi --site /opt/ciena/loads/23.08/<lineup file> --playbook-args='--skip-tags ntp --limit standby_cluster' & ",
+        "table_path": "",
+        "page_number": 24,
+        "type": "P[78]",
+        "header": "Steps "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 25,
+        "type": "L[40]",
+        "header": "Steps "
+      }
+    ]
+  },
+  {
+    "header": "Installing Core Platform and Platform Solution for UAA-RDC 23.08 on Site B (standby) ",
+    "content": [
+      {
+        "text": "Before you install the core platform and platform solution, ensure you complete the following procedure: Preparing site B (standby) for upgrade. ",
+        "table_path": "",
+        "page_number": 26,
+        "type": "P[79]",
+        "header": "Installing Core Platform and Platform Solution for UAA-RDC 23.08 on Site B (standby) "
+      }
+    ]
+  },
+  {
+    "header": "Steps ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 26,
+        "type": "L[41]",
+        "header": "Steps "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 26,
+        "type": "P[80]",
+        "header": "Steps "
+      }
+    ]
+  },
+  {
+    "header": "Connecting Site A and Site B for Geographical Redundancy (automatic procedure) ",
+    "content": [
+      {
+        "text": "Before you connect site A and site B for geographical redundancy, ensure you complete the following procedure - ",
+        "table_path": "",
+        "page_number": 26,
+        "type": "P[81]",
+        "header": "Connecting Site A and Site B for Geographical Redundancy (automatic procedure) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 26,
+        "type": "L[42]",
+        "header": "Connecting Site A and Site B for Geographical Redundancy (automatic procedure) "
+      }
+    ]
+  },
+  {
+    "header": "Steps ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 26,
+        "type": "L[43]",
+        "header": "Steps "
+      },
+      {
+        "text": "./setup-bpi-standby.sh ",
+        "table_path": "",
+        "page_number": 26,
+        "type": "P[82]",
+        "header": "Steps "
+      }
+    ]
+  },
+  {
+    "header": "Logstash Configuration (Optional) ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 27,
+        "type": "P[83]",
+        "header": "Logstash Configuration (Optional) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 27,
+        "type": "P[84]",
+        "header": "Logstash Configuration (Optional) "
+      },
+      {
+        "text": "The user must check whether the Logstash version is 8.x. ",
+        "table_path": "",
+        "page_number": 27,
+        "type": "P[85]",
+        "header": "Logstash Configuration (Optional) "
+      }
+    ]
+  },
+  {
+    "header": "",
+    "content": [
+      {
+        "text": "To check the Logstash Version ",
+        "table_path": "",
+        "page_number": 27,
+        "type": "P[86]",
+        "header": ""
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 27,
+        "type": "L[44]",
+        "header": ""
+      },
+      {
+        "text": "solution_app_restart artifactory.ciena.com.blueplanet.uaa_collector:23.08.XX uaa-logstash ",
+        "table_path": "",
+        "page_number": 27,
+        "type": "P[87]",
+        "header": ""
+      }
+    ]
+  },
+  {
+    "header": "Example of complete Logstash Configuration File: ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "figures/fileoutpart35.png",
+        "page_number": 28,
+        "type": "Figure[9]",
+        "header": "Example of complete Logstash Configuration File: "
+      },
+      {
+        "text": "#The changes to this configuration file should be copied to all the instances of uaa-logstash container in case of HA input { beats { port => 5044 } tcp { port => 5514 type => syslog } udp { port => 5514 type => syslog #codec => plain { # charset => \"ISO-8859-1\" # } } }filter { # Spec handling of \" characters in logs. Standard escape is stripped somewhere on the way to vsure # Msg shows logstash log like this \"message txt \\\"quoted strng\\\" more message txt\" (logstash log) # But in vsure log translator it is \"message txt \"quoted strng\" more message txt\" (med debug log) # So the mutate is required to make it \"message txt \\\\\\\"quoted strng\\\\\\\" more message txt\" # Not sure why, but when mutate is used, actually see \\\\\\\\\\\"quoted string\\\\\\\\\\\" in logstash log. # This ends up in med debug log as the desired \\\"quoted string\\\" mutate { gsub => [\"message\",\"\\\"\",\"\\\\\\\"\"] } # v7 to v8 upgrade(BPUAA -17170): ecs_compatibility mode is enabled by default on v8 and the availablility of 'host' field in the event input got changed. # Added 'host' field in the event input by taking it from the fields available as per ECS compatibility mode. # TCP plugin input if [@metadata][input][tcp][source] and ![host] { mutate { copy => { \"[@metadata][input][tcp][source][name]\" => \"[host]\" } } } # UDP plugin input if [host][ip] { mutate { copy => { \"[host][ip]\" => \"[host]\" } } }}output{ file { path => \"/bp2/log/logstash-plain.log\" codec => rubydebug { metadata => true } } kafka { topic_id => \"com.ciena.bp.uaa.logEvents\" bootstrap_servers => \"kafka.docker:9092\" codec => line { format => \"{\\\"message\\\": \\\"%{message}\\\", \\\"ipaddress\\\": \\\"%{host}\\\"}\" } } } ",
+        "table_path": "",
+        "page_number": 28,
+        "type": "Figure[9]",
+        "header": "Example of complete Logstash Configuration File: "
+      }
+    ]
+  },
+  {
+    "header": "Creating a New Standby Site for Geographical Redundancy ",
+    "content": [
+      {
+        "text": "After activating a Standby site during a geographical redundancy (GR) failover, use this procedure to create a new Standby site for GR (not the former Active site, referred to in the Activating a Standby site for a geographical redundancy failover procedure). ",
+        "table_path": "",
+        "page_number": 29,
+        "type": "P[88]",
+        "header": "Creating a New Standby Site for Geographical Redundancy "
+      },
+      {
+        "text": "If you want to reuse the former Active site, then go to the Restoring the former Active site as the new Standby site. ",
+        "table_path": "",
+        "page_number": 29,
+        "type": "P[89]",
+        "header": "Creating a New Standby Site for Geographical Redundancy "
+      }
+    ]
+  },
+  {
+    "header": "Cleaning up Old Georedundancy Settings ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 29,
+        "type": "L[45]",
+        "header": "Cleaning up Old Georedundancy Settings "
+      },
+      {
+        "text": "",
+        "table_path": "figures/fileoutpart38.png",
+        "page_number": 29,
+        "type": "Figure[10]",
+        "header": "Cleaning up Old Georedundancy Settings "
+      },
+      {
+        "text": "sudo bpssh \"rm -f /etc/ipsec.d/GeoRed-*.conf\" ",
+        "table_path": "",
+        "page_number": 29,
+        "type": "Figure[10]",
+        "header": "Cleaning up Old Georedundancy Settings "
+      },
+      {
+        "text": "To set up a new Standby site, complete the following procedures available in the Blue Planet UAA-RDC Installation Guide. ",
+        "table_path": "",
+        "page_number": 29,
+        "type": "P[90]",
+        "header": "Cleaning up Old Georedundancy Settings "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 29,
+        "type": "L[46]",
+        "header": "Cleaning up Old Georedundancy Settings "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 29,
+        "type": "P[91]",
+        "header": "Cleaning up Old Georedundancy Settings "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 29,
+        "type": "L[47]",
+        "header": "Cleaning up Old Georedundancy Settings "
+      }
+    ]
+  },
+  {
+    "header": "Updating Hosts File ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 30,
+        "type": "L[48]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "#Lists the set of nodes that make up the cluster ",
+        "table_path": "",
+        "page_number": 30,
+        "type": "P[92]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "#The value of ansible_host should be an IP address # ",
+        "table_path": "",
+        "page_number": 30,
+        "type": "P[93]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "#The controller label dictates what components (core platform/platform solutions) are to be deployed on a node ",
+        "table_path": "",
+        "page_number": 30,
+        "type": "P[94]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "# To set a host as a Controller node, either do not set the label (default), or set label \"controller=True\" ",
+        "table_path": "",
+        "page_number": 30,
+        "type": "P[95]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "# To set a host as a Non-Controller node, set label \"controller=False\" # ",
+        "table_path": "",
+        "page_number": 30,
+        "type": "P[96]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "#To deploy one or more solutions on an isolated host (host segregation), set the host as a Non-Controller node, ",
+        "table_path": "",
+        "page_number": 30,
+        "type": "P[97]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "# set label \"controller=False\", add a solution label and provide a comma separated list of solution names. ",
+        "table_path": "",
+        "page_number": 30,
+        "type": "P[98]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "# e.g. \"host3 ansible_host=a.b.c.d controller=False solution=<solution name 1>,<solution name 2> ",
+        "table_path": "",
+        "page_number": 30,
+        "type": "P[99]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "# ",
+        "table_path": "",
+        "page_number": 30,
+        "type": "P[100]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "# [standby_cluster] #standby_host0 ansible_host=a.b.c.d controller=True #standby_host1 ansible_host=a.b.c.d controller=True #standby_host2 ansible_host=a.b.c.d controller=True #standby_host3 ansible_host=a.b.c.d controller=False #standby_host4 ansible_host=a.b.c.d controller=False ",
+        "table_path": "",
+        "page_number": 30,
+        "type": "P[101]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "# ",
+        "table_path": "",
+        "page_number": 30,
+        "type": "P[102]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "[standby_cluster:vars] ",
+        "table_path": "",
+        "page_number": 30,
+        "type": "P[103]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 30,
+        "type": "P[104]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "#site_ip=a.b.c.d/XX # ",
+        "table_path": "",
+        "page_number": 30,
+        "type": "P[105]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 30,
+        "type": "P[106]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "The following shows a sample of active host 0 file after the multi-host edits of active and standby sites are made for an installation where the subnet mask is 22 (255.255.252.0). ",
+        "table_path": "",
+        "page_number": 30,
+        "type": "P[107]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "[cluster] ",
+        "table_path": "",
+        "page_number": 30,
+        "type": "P[108]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "host0 ansible_host=10.186.34.246 controller=True host1 ansible_host=10.186.33.108 controller=True host2 ansible_host=10.186.32.60 controller=True #host3 ansible_host=a.b.c.d controller=False ",
+        "table_path": "",
+        "page_number": 30,
+        "type": "P[109]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "#host4 ansible_host=a.b.c.d controller=False ",
+        "table_path": "",
+        "page_number": 30,
+        "type": "P[110]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "[cluster:vars] ",
+        "table_path": "",
+        "page_number": 30,
+        "type": "L[49]/LI/LBody",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 30,
+        "type": "L[49]/LI",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 30,
+        "type": "L[49]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 30,
+        "type": "P[111]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 30,
+        "type": "L[50]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "standby_host0 ansible_host=10.186.34.235 controller=True standby_host1 ansible_host=10.186.32.44 controller=True standby_host2 ansible_host=10.186.33.120 controller=True #standby_host3 ansible_host=a.b.c.d controller=False #standby_host4 ansible_host=a.b.c.d controller=False # ",
+        "table_path": "",
+        "page_number": 30,
+        "type": "P[112]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "[standby_cluster:vars] ",
+        "table_path": "",
+        "page_number": 30,
+        "type": "P[113]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 30,
+        "type": "L[51]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "# Valid characters for site_name are letters, numbers and dashes. site_name=BPSite2 ",
+        "table_path": "",
+        "page_number": 31,
+        "type": "P[114]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "# ",
+        "table_path": "",
+        "page_number": 31,
+        "type": "P[115]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "#Required for ubuntu 16.04, when python 2.x is not installed #ansible_python_interpreter=/usr/bin/python3 ",
+        "table_path": "",
+        "page_number": 31,
+        "type": "P[116]",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "4. ",
+        "table_path": "",
+        "page_number": 31,
+        "type": "L[52]/LI/Lbl",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "Save the hosts file. ",
+        "table_path": "",
+        "page_number": 31,
+        "type": "L[52]/LI/LBody",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 31,
+        "type": "L[52]/LI",
+        "header": "Updating Hosts File "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 31,
+        "type": "L[52]",
+        "header": "Updating Hosts File "
+      }
+    ]
+  },
+  {
+    "header": "Modifying the Volume Group Name ",
+    "content": [
+      {
+        "text": "Blue Planet recommends using unique names that can be recognized and avoid name conflicts across multiple virtual groups. ",
+        "table_path": "",
+        "page_number": 31,
+        "type": "P[117]",
+        "header": "Modifying the Volume Group Name "
+      },
+      {
+        "text": "Complete the following steps to modify the volume group name where the unallocated physical extents space is left free for UAA-RDC to create and configure the Docker thin pool. ",
+        "table_path": "",
+        "page_number": 31,
+        "type": "P[118]",
+        "header": "Modifying the Volume Group Name "
+      },
+      {
+        "text": "This is the first of six procedures requiring edits to the all.yml file of the active site and to the standby_cluster file of the standby site. ",
+        "table_path": "",
+        "page_number": 31,
+        "type": "P[119]",
+        "header": "Modifying the Volume Group Name "
+      }
+    ]
+  },
+  {
+    "header": "NOTE ",
+    "content": [
+      {
+        "text": "These files are located in the /home/bpadmin/bpi/playbooks/group_vars directory of host 0 of the active site. Most of the edits are as required by your specific network environment and UAA-RDC installation. ",
+        "table_path": "",
+        "page_number": 31,
+        "type": "P[120]",
+        "header": "NOTE "
+      },
+      {
+        "text": "You might not need to complete many of them unless you want to change the default values. ",
+        "table_path": "",
+        "page_number": 31,
+        "type": "P[121]",
+        "header": "NOTE "
+      },
+      {
+        "text": "Remaining procedures include Configuring a time source, Configuring geographical redundancy, Configuring the Blue Planet email service, Modifying the ILAN NET interface, and Modifying the default UAA-RDC interface. ",
+        "table_path": "",
+        "page_number": 31,
+        "type": "P[122]",
+        "header": "NOTE "
+      },
+      {
+        "text": "Before you begin, verify that you - ",
+        "table_path": "",
+        "page_number": 31,
+        "type": "P[123]",
+        "header": "NOTE "
+      }
+    ]
+  },
+  {
+    "header": "",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 31,
+        "type": "P[124]",
+        "header": ""
+      },
+      {
+        "text": "To modify the volume group name - ",
+        "table_path": "",
+        "page_number": 31,
+        "type": "P[125]",
+        "header": ""
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 31,
+        "type": "L[53]",
+        "header": ""
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 31,
+        "type": "P[126]",
+        "header": ""
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 31,
+        "type": "P[127]",
+        "header": ""
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 31,
+        "type": "P[128]",
+        "header": ""
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 31,
+        "type": "P[129]",
+        "header": ""
+      }
+    ]
+  },
+  {
+    "header": "Configuring a Time Source ",
+    "content": [
+      {
+        "text": "UAA-RDC hosts can use a local or remote time source. For example - ",
+        "table_path": "",
+        "page_number": 32,
+        "type": "P[130]",
+        "header": "Configuring a Time Source "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 32,
+        "type": "L[54]",
+        "header": "Configuring a Time Source "
+      }
+    ]
+  },
+  {
+    "header": "NOTE ",
+    "content": [
+      {
+        "text": "Configure NTP in accordance with your site timeserver infrastructure. The Blue Planet installer can apply a simple configuration with one, three, or four timeservers. If NTP is already configured on UAA-RDC host, skip this procedure. ",
+        "table_path": "",
+        "page_number": 32,
+        "type": "P[131]",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 32,
+        "type": "P[132]",
+        "header": "NOTE "
+      },
+      {
+        "text": "ntp_servers_default: ",
+        "table_path": "",
+        "page_number": 32,
+        "type": "P[133]",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 32,
+        "type": "L[55]",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 32,
+        "type": "P[134]",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 32,
+        "type": "L[56]",
+        "header": "NOTE "
+      }
+    ]
+  },
+  {
+    "header": "NOTE ",
+    "content": [
+      {
+        "text": "Disable all other timing synchronization methods including, but not limited to, VMware Tools periodic time synchronization. ",
+        "table_path": "",
+        "page_number": 32,
+        "type": "P[135]",
+        "header": "NOTE "
+      },
+      {
+        "text": "Following installation, you can use the bp2-site check-platform or bp2-site checkclockdrift commands to check UAA-RDC timing synchronization. ",
+        "table_path": "",
+        "page_number": 32,
+        "type": "P[136]",
+        "header": "NOTE "
+      },
+      {
+        "text": "Complete this procedure to configures the Network Time Protocol (NTP) server(s) to serve as the timing source for UAA-RDC hosts. This is a mandatory procedure. ",
+        "table_path": "",
+        "page_number": 32,
+        "type": "P[137]",
+        "header": "NOTE "
+      },
+      {
+        "text": "All UAA-RDC hosts must be synchronized to an accurate timing source. If you want to use a local time source or custom remote time sources (different than the default ones provided), then perform this procedure. ",
+        "table_path": "",
+        "page_number": 32,
+        "type": "P[138]",
+        "header": "NOTE "
+      },
+      {
+        "text": "Before you begin this procedure, verify that you - ",
+        "table_path": "",
+        "page_number": 32,
+        "type": "P[139]",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 32,
+        "type": "L[57]",
+        "header": "NOTE "
+      },
+      {
+        "text": "To configure a time source - ",
+        "table_path": "",
+        "page_number": 32,
+        "type": "P[140]",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 32,
+        "type": "L[58]",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 33,
+        "type": "P[141]",
+        "header": "NOTE "
+      },
+      {
+        "text": "# In the 'remote' case, you can also override the set of remote servers by uncommenting and setting the ",
+        "table_path": "",
+        "page_number": 33,
+        "type": "P[142]",
+        "header": "NOTE "
+      },
+      {
+        "text": "# 'ntp_servers_custom' variable and configuring 1,3 or 4 NTP servers to connect to. To do so, uncomment ",
+        "table_path": "",
+        "page_number": 33,
+        "type": "P[143]",
+        "header": "NOTE "
+      },
+      {
+        "text": "# the 'ntp_servers_custom' variable and uncomment and configure the appropriate number of hosts. e.g. change ",
+        "table_path": "",
+        "page_number": 33,
+        "type": "P[144]",
+        "header": "NOTE "
+      },
+      {
+        "text": "# '<host a>' (and optionally host b, host c and host d) to the IP address or hostname of a valid NTP server. ",
+        "table_path": "",
+        "page_number": 33,
+        "type": "P[145]",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 33,
+        "type": "L[59]",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 33,
+        "type": "P[146]",
+        "header": "NOTE "
+      },
+      {
+        "text": "# In the 'remote' case, you can also override the set of remote servers by uncommenting and setting the ",
+        "table_path": "",
+        "page_number": 34,
+        "type": "L[60]/LI/LBody",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 34,
+        "type": "L[60]/LI",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 34,
+        "type": "L[60]",
+        "header": "NOTE "
+      },
+      {
+        "text": "# 'ntp_servers_custom' variable and configuring 1,3 or 4 NTP servers to connect to. To do so, uncomment ",
+        "table_path": "",
+        "page_number": 34,
+        "type": "P[147]",
+        "header": "NOTE "
+      },
+      {
+        "text": "# the 'ntp_servers_custom' variable and uncomment and configure the appropriate number of hosts. e.g. change ",
+        "table_path": "",
+        "page_number": 34,
+        "type": "P[148]",
+        "header": "NOTE "
+      },
+      {
+        "text": "# '<host a>' (and optionally host b, host c and host d) to the IP address or hostname of a valid NTP server. ",
+        "table_path": "",
+        "page_number": 34,
+        "type": "P[149]",
+        "header": "NOTE "
+      },
+      {
+        "text": "ntp_servers_custom: ",
+        "table_path": "",
+        "page_number": 34,
+        "type": "P[150]",
+        "header": "NOTE "
+      },
+      {
+        "text": "- ",
+        "table_path": "",
+        "page_number": 34,
+        "type": "L[61]/LI/Lbl",
+        "header": "NOTE "
+      },
+      {
+        "text": "0.10.128.8.89 ",
+        "table_path": "",
+        "page_number": 34,
+        "type": "L[61]/LI/LBody",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 34,
+        "type": "L[61]/LI",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 34,
+        "type": "L[61]",
+        "header": "NOTE "
+      },
+      {
+        "text": "7. ",
+        "table_path": "",
+        "page_number": 34,
+        "type": "L[62]/LI/Lbl",
+        "header": "NOTE "
+      },
+      {
+        "text": "By default, the ntp_server_options entry default is iburst. For details about the ntp_server_options, see https://linux.die.net/man/5/ntp.conf. If you want to change the default value, uncomment ntp_server_options and edit its value in standby_cluster and save the file. ",
+        "table_path": "",
+        "page_number": 34,
+        "type": "L[62]/LI/LBody",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 34,
+        "type": "L[62]/LI",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 34,
+        "type": "L[62]",
+        "header": "NOTE "
+      }
+    ]
+  },
+  {
+    "header": "Configuring Geographical Redundancy ",
+    "content": [
+      {
+        "text": "This section describes the configuration of geographical redundancy functions which are given below. These parameters need to be configured in standby_cluster file for standby site. ",
+        "table_path": "",
+        "page_number": 34,
+        "type": "P[151]",
+        "header": "Configuring Geographical Redundancy "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 34,
+        "type": "L[63]",
+        "header": "Configuring Geographical Redundancy "
+      }
+    ]
+  },
+  {
+    "header": "NOTE ",
+    "content": [
+      {
+        "text": "You must have GR SiteId and SiteState, before creating the geored_site_id. geored_site_id uniquely identifies a site from a GR context. ",
+        "table_path": "",
+        "page_number": 34,
+        "type": "P[152]",
+        "header": "NOTE "
+      },
+      {
+        "text": "This variable should be set to something meaningful for your deployment, for example, Toronto, DataCenter_1, Zone-East. Application deployments will not be fully functional until the GR SiteId and SiteState are configured. Valid characters for geored_site_id are letters, numbers, underscores and dashes and must be at least 3 characters in length. For example, geored_site_id: SiteA. ",
+        "table_path": "",
+        "page_number": 34,
+        "type": "P[153]",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 34,
+        "type": "L[64]",
+        "header": "NOTE "
+      }
+    ]
+  },
+  {
+    "header": "Requirements ",
+    "content": [
+      {
+        "text": "Before you begin this procedure, verify that you - ",
+        "table_path": "",
+        "page_number": 34,
+        "type": "P[154]",
+        "header": "Requirements "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 34,
+        "type": "L[65]",
+        "header": "Requirements "
+      }
+    ]
+  },
+  {
+    "header": "Steps ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 34,
+        "type": "L[66]",
+        "header": "Steps "
+      }
+    ]
+  },
+  {
+    "header": "Configuring the Blue Planet email Service ",
+    "content": [
+      {
+        "text": "UAA-RDC requires that you configure a Simple Mail Transfer Protocol (SMTP) server so UAA-RDC can send system email to users. Emails are used for alarm notifications and forgotten password assistance. ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "P[155]",
+        "header": "Configuring the Blue Planet email Service "
+      }
+    ]
+  },
+  {
+    "header": "NOTE ",
+    "content": [
+      {
+        "text": "If password expirations are enabled and the SMTP server is not configured, users will not be able to log in after their password expires. Blue Planet recommends if you cannot complete the configuration now, ensure you do it within 60 days to avoid causing users to be locked out with no way to reset their passwords. ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "P[156]",
+        "header": "NOTE "
+      },
+      {
+        "text": "Complete the following procedure to configure Blue Planet email service. This is a mandatory procedure. ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "P[157]",
+        "header": "NOTE "
+      },
+      {
+        "text": "Before you begin this procedure, verify that you - ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "P[158]",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 35,
+        "type": "L[67]",
+        "header": "NOTE "
+      },
+      {
+        "text": "To configure the Blue Planet email service - ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "P[159]",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 35,
+        "type": "L[68]",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "tables/fileoutpart39.xlsx",
+        "page_number": 35,
+        "type": "Table[4]",
+        "header": "NOTE "
+      }
+    ]
+  },
+  {
+    "header": "",
+    "content": []
+  },
+  {
+    "header": "ISSUE ",
+    "content": []
+  },
+  {
+    "header": "",
+    "content": []
+  },
+  {
+    "header": "DESCRIPTION ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[2]/TD",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "smtp_username ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[2]/TD/P",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[2]/TD[2]",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "The SMTP server account username used for sending emails. ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[2]/TD[2]/P",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[3]/TD",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "smtp_password ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[3]/TD/P",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[3]/TD[2]",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "The SMTP server account password. ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[3]/TD[2]/P",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[4]/TD",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "smtp_staticPath ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[4]/TD/P",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[4]/TD[2]",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "The staticPath value must be /bp2/src/static. Do not change this value. ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[4]/TD[2]/P",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[5]/TD",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "smtp_authen ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[5]/TD/P",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[5]/TD[2]",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "The SMTP server authentication. Set the value to true. ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[5]/TD[2]/P",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[6]/TD",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "smtp_transport ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[6]/TD/P",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[6]/TD[2]",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "The SMTP server transport security. Set the value to true or false, as applicable. ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[6]/TD[2]/P",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[7]/TD",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "smtp_mail_server ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[7]/TD/P",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[7]/TD[2]",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "The SMTP server fully qualified domain name (FQDN), such as smtp.gmail.com or, if ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[7]/TD[2]/P",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[8]/TD",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "smtp_mailer_name ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[8]/TD/P",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[8]/TD[2]",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "Must be set to Blue Planet Mailer. Do not change this value. ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[8]/TD[2]/P",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[9]/TD",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "smtp_port ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[9]/TD/P",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[9]/TD[2]",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "The SMTP server port number. Depending on the server, this port can be 25, 465, or ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[9]/TD[2]/P",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "587. ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[9]/TD[2]/P[2]",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[10]/TD",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "smtp_email ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[10]/TD/P",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[10]/TD[2]",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "The SMTP server email account from which reset password emails will be sent. Some SMTP servers, such as Gmail, allow you to use an alias that is not set on the server. For example, the account could be \"bphostmonitor@abccompany.com\", but the value could be \"api- crinoid@ciena.com\". Of course, you can enter the true value, bphostmonitor@abccompany.com. The Amazon Web Services (AWS) SMTP server ",
+        "table_path": "",
+        "page_number": 35,
+        "type": "Table[4]/TR[10]/TD[2]/P",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 35,
+        "type": "P[160]",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 35,
+        "type": "P[161]",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "smtp_mailer_name: MAILER_NAME ",
+        "table_path": "",
+        "page_number": 36,
+        "type": "P[162]",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "smtp_port: SMTP_PORT smtp_email: MAILER@EMAIL.COM ",
+        "table_path": "",
+        "page_number": 36,
+        "type": "P[163]",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "",
+        "table_path": "figures/fileoutpart41.png",
+        "page_number": 36,
+        "type": "Figure[11]",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "Example after the edit – # SMTP configuration details for 'Forgot Password' feature smtp_username: GmailUser smtp_password: AnyPassword smtp_staticPath: /bp2/src/static smtp_authen: true smtp_transport: true smtp_mail_server: smtp.gmail.com smtp_mailer_name: Blue Planet Mailer smtp_port: 587 smtp_email: ",
+        "table_path": "",
+        "page_number": 36,
+        "type": "Figure[11]",
+        "header": "DESCRIPTION "
+      },
+      {
+        "text": "api-crinoid@AnyCompany.com ",
+        "table_path": "",
+        "page_number": 36,
+        "type": "Figure[11]/Reference",
+        "header": "DESCRIPTION "
+      }
+    ]
+  },
+  {
+    "header": "Modifying the ILAN NET Interface ",
+    "content": [
+      {
+        "text": "UAA-RDC uses the address 172.16.0.0/16/24 for its internal LAN (iLAN). Complete this procedure if - ",
+        "table_path": "",
+        "page_number": 36,
+        "type": "P[164]",
+        "header": "Modifying the ILAN NET Interface "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 36,
+        "type": "L[69]",
+        "header": "Modifying the ILAN NET Interface "
+      },
+      {
+        "text": "Before you begin this procedure, verify that you - ",
+        "table_path": "",
+        "page_number": 36,
+        "type": "P[165]",
+        "header": "Modifying the ILAN NET Interface "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 36,
+        "type": "L[70]",
+        "header": "Modifying the ILAN NET Interface "
+      },
+      {
+        "text": "To modify the iLAN interface - ",
+        "table_path": "",
+        "page_number": 36,
+        "type": "P[166]",
+        "header": "Modifying the ILAN NET Interface "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 36,
+        "type": "L[71]",
+        "header": "Modifying the ILAN NET Interface "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 36,
+        "type": "P[167]",
+        "header": "Modifying the ILAN NET Interface "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 36,
+        "type": "P[168]",
+        "header": "Modifying the ILAN NET Interface "
+      },
+      {
+        "text": "ilannet: 172.19.0.0/16/24 ",
+        "table_path": "",
+        "page_number": 36,
+        "type": "L[72]/LI/LBody",
+        "header": "Modifying the ILAN NET Interface "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 36,
+        "type": "L[72]/LI",
+        "header": "Modifying the ILAN NET Interface "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 36,
+        "type": "L[72]",
+        "header": "Modifying the ILAN NET Interface "
+      }
+    ]
+  },
+  {
+    "header": "NOTE ",
+    "content": [
+      {
+        "text": "If you are installing georedundancy, the active and standby sites must have different iLAN addresses. The active site can use the default (or user-assigned) address. The standby site must be on a different network. ",
+        "table_path": "",
+        "page_number": 36,
+        "type": "P[169]",
+        "header": "NOTE "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 36,
+        "type": "P[170]",
+        "header": "NOTE "
+      }
+    ]
+  },
+  {
+    "header": "Modifying the Default UAA-RDC Interface ",
+    "content": [
+      {
+        "text": "By default, UAA-RDC uses the first network interface, eth0, for Blue Planet activities. Complete the following steps if you want to set a new default interface. Otherwise, you can skip this procedure and continue with the Specifying the external license server procedure. ",
+        "table_path": "",
+        "page_number": 37,
+        "type": "P[171]",
+        "header": "Modifying the Default UAA-RDC Interface "
+      },
+      {
+        "text": "Before you begin this procedure, verify that you - ",
+        "table_path": "",
+        "page_number": 37,
+        "type": "P[172]",
+        "header": "Modifying the Default UAA-RDC Interface "
+      },
+      {
+        "text": "• ",
+        "table_path": "",
+        "page_number": 37,
+        "type": "L[73]/LI/Lbl",
+        "header": "Modifying the Default UAA-RDC Interface "
+      },
+      {
+        "text": "Completed the Updating hosts file procedure. ",
+        "table_path": "",
+        "page_number": 37,
+        "type": "L[73]/LI/LBody",
+        "header": "Modifying the Default UAA-RDC Interface "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 37,
+        "type": "L[73]/LI",
+        "header": "Modifying the Default UAA-RDC Interface "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 37,
+        "type": "L[73]",
+        "header": "Modifying the Default UAA-RDC Interface "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 37,
+        "type": "P[173]",
+        "header": "Modifying the Default UAA-RDC Interface "
+      },
+      {
+        "text": "To modify the default UAA-RDC interface - ",
+        "table_path": "",
+        "page_number": 37,
+        "type": "P[174]",
+        "header": "Modifying the Default UAA-RDC Interface "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 37,
+        "type": "L[74]",
+        "header": "Modifying the Default UAA-RDC Interface "
+      }
+    ]
+  },
+  {
+    "header": "Specifying the External License Server ",
+    "content": [
+      {
+        "text": "Use this procedure to set up the external license server IP address in cluster and standby_cluster files. ",
+        "table_path": "",
+        "page_number": 37,
+        "type": "P[175]",
+        "header": "Specifying the External License Server "
+      }
+    ]
+  },
+  {
+    "header": "Requirements ",
+    "content": [
+      {
+        "text": "Before you begin this procedure, verify that you - ",
+        "table_path": "",
+        "page_number": 37,
+        "type": "P[176]",
+        "header": "Requirements "
+      },
+      {
+        "text": "• ",
+        "table_path": "",
+        "page_number": 37,
+        "type": "L[75]/LI/Lbl",
+        "header": "Requirements "
+      },
+      {
+        "text": "Completed the Updating hosts file procedure. ",
+        "table_path": "",
+        "page_number": 37,
+        "type": "L[75]/LI/LBody",
+        "header": "Requirements "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 37,
+        "type": "L[75]/LI",
+        "header": "Requirements "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 37,
+        "type": "L[75]",
+        "header": "Requirements "
+      }
+    ]
+  },
+  {
+    "header": "Steps ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 37,
+        "type": "L[76]",
+        "header": "Steps "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 38,
+        "type": "P[177]",
+        "header": "Steps "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 38,
+        "type": "P[178]",
+        "header": "Steps "
+      },
+      {
+        "text": "# License Server details for unbundling encrypted offline archives and runtime #requirements ",
+        "table_path": "",
+        "page_number": 38,
+        "type": "P[179]",
+        "header": "Steps "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 38,
+        "type": "P[180]",
+        "header": "Steps "
+      }
+    ]
+  },
+  {
+    "header": "Setting Up Users ",
+    "content": [
+      {
+        "text": "Complete this procedure to manage keys of the bpadmin user and the root user, and to create the bpuser user (sudo restricted Docker install user) and manage its sudo permissions and keys. This is a mandatory procedure. The setup script skips thi step if you have previously manually created the bpuser user. ",
+        "table_path": "",
+        "page_number": 38,
+        "type": "P[181]",
+        "header": "Setting Up Users "
+      },
+      {
+        "text": "Before you begin this procedure, verify that you - ",
+        "table_path": "",
+        "page_number": 38,
+        "type": "P[182]",
+        "header": "Setting Up Users "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 38,
+        "type": "L[77]",
+        "header": "Setting Up Users "
+      },
+      {
+        "text": "To set up users - ",
+        "table_path": "",
+        "page_number": 38,
+        "type": "P[183]",
+        "header": "Setting Up Users "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 38,
+        "type": "L[78]",
+        "header": "Setting Up Users "
+      },
+      {
+        "text": "The script sets the bpadmin and bpuser authentication keys as well as several sudo privileges for the bpuser user. See the files in /home/bpadmin/bpi/roles/setup-users/sudoers/templates to see the settings. ",
+        "table_path": "",
+        "page_number": 38,
+        "type": "P[184]",
+        "header": "Setting Up Users "
+      }
+    ]
+  },
+  {
+    "header": "Validating the Hosts ",
+    "content": [
+      {
+        "text": "This procedure verifies that the host hardware and software where you will install the UAA-RDC meet Blue Planet requirements. The validation is based upon requirements described in the Hardware and software requirements chapter. ",
+        "table_path": "",
+        "page_number": 39,
+        "type": "P[185]",
+        "header": "Validating the Hosts "
+      },
+      {
+        "text": "The validation phase checks the following areas and related requirements - ",
+        "table_path": "",
+        "page_number": 39,
+        "type": "P[186]",
+        "header": "Validating the Hosts "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 39,
+        "type": "L[79]",
+        "header": "Validating the Hosts "
+      },
+      {
+        "text": "Before you begin this procedure, verify that you - ",
+        "table_path": "",
+        "page_number": 39,
+        "type": "P[187]",
+        "header": "Validating the Hosts "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 39,
+        "type": "L[80]",
+        "header": "Validating the Hosts "
+      },
+      {
+        "text": "To validate the hosts - ",
+        "table_path": "",
+        "page_number": 39,
+        "type": "P[188]",
+        "header": "Validating the Hosts "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 39,
+        "type": "L[81]",
+        "header": "Validating the Hosts "
+      }
+    ]
+  },
+  {
+    "header": "Configuring UAA-RDC Hosts on Active and Standby Sites ",
+    "content": [
+      {
+        "text": "Complete this procedure to configure the UAA-RDC host(s) on active and standby sites for the UAA-RDC software installation from host 0 of active site. ",
+        "table_path": "",
+        "page_number": 40,
+        "type": "P[189]",
+        "header": "Configuring UAA-RDC Hosts on Active and Standby Sites "
+      },
+      {
+        "text": "Configuring the UAA-RDC hosts creates the following directories on active and standby sites. It also ensures they are owned by bpuser on both active and standby sites - ",
+        "table_path": "",
+        "page_number": 40,
+        "type": "P[190]",
+        "header": "Configuring UAA-RDC Hosts on Active and Standby Sites "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 40,
+        "type": "L[82]",
+        "header": "Configuring UAA-RDC Hosts on Active and Standby Sites "
+      },
+      {
+        "text": "This procedure also performs minor configuration changes including updates to syslog, rsyslog, sshd, and NTP to prepares the hosts for UAA-RDC installation on active and standby sites. ",
+        "table_path": "",
+        "page_number": 40,
+        "type": "P[191]",
+        "header": "Configuring UAA-RDC Hosts on Active and Standby Sites "
+      },
+      {
+        "text": "Before you begin this procedure, verify that you - ",
+        "table_path": "",
+        "page_number": 40,
+        "type": "P[192]",
+        "header": "Configuring UAA-RDC Hosts on Active and Standby Sites "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 40,
+        "type": "L[83]",
+        "header": "Configuring UAA-RDC Hosts on Active and Standby Sites "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 40,
+        "type": "P[193]",
+        "header": "Configuring UAA-RDC Hosts on Active and Standby Sites "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 40,
+        "type": "L[84]",
+        "header": "Configuring UAA-RDC Hosts on Active and Standby Sites "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 40,
+        "type": "P[194]",
+        "header": "Configuring UAA-RDC Hosts on Active and Standby Sites "
+      },
+      {
+        "text": "If no failures occur, indicated by failed=0, continue with the next step. If failures occurred, contact Blue Planet Customer Support for guidance. ",
+        "table_path": "",
+        "page_number": 40,
+        "type": "P[195]",
+        "header": "Configuring UAA-RDC Hosts on Active and Standby Sites "
+      }
+    ]
+  },
+  {
+    "header": "Installing Core Platform and Extended Platform Solution on Active and Standby Sites ",
+    "content": [
+      {
+        "text": "Complete this procedure to install core platform and platform solution on active and standby sites from host 0 of the active site. ",
+        "table_path": "",
+        "page_number": 41,
+        "type": "P[196]",
+        "header": "Installing Core Platform and Extended Platform Solution on Active and Standby Sites "
+      },
+      {
+        "text": "Before you begin this procedure, verify that you - ",
+        "table_path": "",
+        "page_number": 41,
+        "type": "P[197]",
+        "header": "Installing Core Platform and Extended Platform Solution on Active and Standby Sites "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 41,
+        "type": "L[85]",
+        "header": "Installing Core Platform and Extended Platform Solution on Active and Standby Sites "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 41,
+        "type": "P[198]",
+        "header": "Installing Core Platform and Extended Platform Solution on Active and Standby Sites "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 41,
+        "type": "L[86]",
+        "header": "Installing Core Platform and Extended Platform Solution on Active and Standby Sites "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 41,
+        "type": "P[199]",
+        "header": "Installing Core Platform and Extended Platform Solution on Active and Standby Sites "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 41,
+        "type": "P[200]",
+        "header": "Installing Core Platform and Extended Platform Solution on Active and Standby Sites "
+      }
+    ]
+  },
+  {
+    "header": "Installing UAA-RDC and Configuring Georedundancy on Active and Standby Sites (automatic procedure) ",
+    "content": [
+      {
+        "text": "Complete this procedure to install UAA-RDC solution on active and standby sites. This procedure also automatically sets up geographical redundant configuration between active and standby. ",
+        "table_path": "",
+        "page_number": 41,
+        "type": "P[201]",
+        "header": "Installing UAA-RDC and Configuring Georedundancy on Active and Standby Sites (automatic procedure) "
+      },
+      {
+        "text": "This procedure performs - ",
+        "table_path": "",
+        "page_number": 41,
+        "type": "P[202]",
+        "header": "Installing UAA-RDC and Configuring Georedundancy on Active and Standby Sites (automatic procedure) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 41,
+        "type": "L[87]",
+        "header": "Installing UAA-RDC and Configuring Georedundancy on Active and Standby Sites (automatic procedure) "
+      },
+      {
+        "text": "Before you begin this procedure, verify that you - ",
+        "table_path": "",
+        "page_number": 41,
+        "type": "P[203]",
+        "header": "Installing UAA-RDC and Configuring Georedundancy on Active and Standby Sites (automatic procedure) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 41,
+        "type": "L[88]",
+        "header": "Installing UAA-RDC and Configuring Georedundancy on Active and Standby Sites (automatic procedure) "
+      },
+      {
+        "text": "To install UAA-RDC and configure georedundancy - ",
+        "table_path": "",
+        "page_number": 41,
+        "type": "P[204]",
+        "header": "Installing UAA-RDC and Configuring Georedundancy on Active and Standby Sites (automatic procedure) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 41,
+        "type": "L[89]",
+        "header": "Installing UAA-RDC and Configuring Georedundancy on Active and Standby Sites (automatic procedure) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 42,
+        "type": "P[205]",
+        "header": "Installing UAA-RDC and Configuring Georedundancy on Active and Standby Sites (automatic procedure) "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 42,
+        "type": "P[206]",
+        "header": "Installing UAA-RDC and Configuring Georedundancy on Active and Standby Sites (automatic procedure) "
+      }
+    ]
+  },
+  {
+    "header": "NOTE ",
+    "content": [
+      {
+        "text": "Ignore the containers showing an Unknown status. Nagios can take up to 30 minutes to display the status of all services as GREEN. ",
+        "table_path": "",
+        "page_number": 42,
+        "type": "P[207]",
+        "header": "NOTE "
+      }
+    ]
+  },
+  {
+    "header": "Revert Override Configuration in Postgres ",
+    "content": [
+      {
+        "text": "To revert override configuration in postgres - ",
+        "table_path": "",
+        "page_number": 42,
+        "type": "P[208]",
+        "header": "Revert Override Configuration in Postgres "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 42,
+        "type": "L[90]",
+        "header": "Revert Override Configuration in Postgres "
+      },
+      {
+        "text": "",
+        "table_path": "figures/fileoutpart45.png",
+        "page_number": 42,
+        "type": "Figure[12]",
+        "header": "Revert Override Configuration in Postgres "
+      },
+      {
+        "text": "sudo bp2-site sync-site-config ",
+        "table_path": "",
+        "page_number": 42,
+        "type": "Figure[12]",
+        "header": "Revert Override Configuration in Postgres "
+      }
+    ]
+  },
+  {
+    "header": "Contacting Blue Planet ",
+    "content": [
+      {
+        "text": "",
+        "table_path": "tables/fileoutpart46.xlsx",
+        "page_number": 43,
+        "type": "Table[5]",
+        "header": "Contacting Blue Planet "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 43,
+        "type": "Table[5]/TR/TD",
+        "header": "Contacting Blue Planet "
+      },
+      {
+        "text": "Blue Planet Division Headquarters ",
+        "table_path": "",
+        "page_number": 43,
+        "type": "Table[5]/TR/TD/P",
+        "header": "Contacting Blue Planet "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 43,
+        "type": "Table[5]/TR/TD[2]",
+        "header": "Contacting Blue Planet "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 43,
+        "type": "Table[5]/TR/TD[2]/P",
+        "header": "Contacting Blue Planet "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 43,
+        "type": "Table[5]/TR[2]/TD",
+        "header": "Contacting Blue Planet "
+      },
+      {
+        "text": "Blue Planet Support ",
+        "table_path": "",
+        "page_number": 43,
+        "type": "Table[5]/TR[2]/TD/P",
+        "header": "Contacting Blue Planet "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 43,
+        "type": "Table[5]/TR[2]/TD[2]",
+        "header": "Contacting Blue Planet "
+      },
+      {
+        "text": "https://www.blueplanet.com/support ",
+        "table_path": "",
+        "page_number": 43,
+        "type": "Table[5]/TR[2]/TD[2]/P",
+        "header": "Contacting Blue Planet "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 43,
+        "type": "Table[5]/TR[3]/TD",
+        "header": "Contacting Blue Planet "
+      },
+      {
+        "text": "Sales and General Information ",
+        "table_path": "",
+        "page_number": 43,
+        "type": "Table[5]/TR[3]/TD/P",
+        "header": "Contacting Blue Planet "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 43,
+        "type": "Table[5]/TR[3]/TD[2]",
+        "header": "Contacting Blue Planet "
+      },
+      {
+        "text": "https://www.blueplanet.com/contact ",
+        "table_path": "",
+        "page_number": 43,
+        "type": "Table[5]/TR[3]/TD[2]/P",
+        "header": "Contacting Blue Planet "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 43,
+        "type": "Table[5]/TR[4]/TD",
+        "header": "Contacting Blue Planet "
+      },
+      {
+        "text": "Training ",
+        "table_path": "",
+        "page_number": 43,
+        "type": "Table[5]/TR[4]/TD/P",
+        "header": "Contacting Blue Planet "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 43,
+        "type": "Table[5]/TR[4]/TD[2]",
+        "header": "Contacting Blue Planet "
+      },
+      {
+        "text": "https://www.blueplanet.com/learning ",
+        "table_path": "",
+        "page_number": 43,
+        "type": "Table[5]/TR[4]/TD[2]/P",
+        "header": "Contacting Blue Planet "
+      },
+      {
+        "text": "For additional information, please visit https://www.blueplanet.com. ",
+        "table_path": "",
+        "page_number": 43,
+        "type": "P[209]",
+        "header": "Contacting Blue Planet "
+      }
+    ]
+  },
+  {
+    "header": "LEGAL NOTICES ",
+    "content": [
+      {
+        "text": "THIS DOCUMENT CONTAINS CONFIDENTIAL AND TRADE SECRET INFORMATION OF CIENA CORPORATION, INCLUDING ITS SUBSIDIARY, BLUE PLANET SOFTWARE, INC., AND ITS RECEIPT OR POSSESSION DOES NOT CONVEY ANY RIGHTS TO REPRODUCE OR DISCLOSE ITS CONTENTS, OR TO MANUFACTURE, USE, OR SELL ANYTHING THAT IT MAY DESCRIBE. REPRODUCTION, DISCLOSURE, OR USE IN WHOLE OR IN PART WITHOUT THE SPECIFIC WRITTEN AUTHORIZATION OF CIENA CORPORATION OR BLUE PLANET SOFTWARE, INC IS STRICTLY FORBIDDEN. ",
+        "table_path": "",
+        "page_number": 44,
+        "type": "P[210]",
+        "header": "LEGAL NOTICES "
+      },
+      {
+        "text": "EVERY EFFORT HAS BEEN MADE TO ENSURE THAT THE INFORMATION IN THIS DOCUMENT IS COMPLETE AND ACCURATE AT THE TIME OF PUBLISHING; HOWEVER, THE INFORMATION CONTAINED IN THIS DOCUMENT IS SUBJECT TO CHANGE. ",
+        "table_path": "",
+        "page_number": 44,
+        "type": "P[211]",
+        "header": "LEGAL NOTICES "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 44,
+        "type": "P[212]",
+        "header": "LEGAL NOTICES "
+      },
+      {
+        "text": "",
+        "table_path": "",
+        "page_number": 44,
+        "type": "P[213]",
+        "header": "LEGAL NOTICES "
+      },
+      {
+        "text": "The material contained in this document is also protected by copyright laws of the United States of America and other countries. It may not be reproduced or distributed in any form by any means, altered in any fashion, or stored in a data base or retrieval system, without express written permission of Blue Planet. ",
+        "table_path": "",
+        "page_number": 44,
+        "type": "P[214]",
+        "header": "LEGAL NOTICES "
+      },
+      {
+        "text": "Ciena®, the Ciena logo, Blue Planet®, and other trademarks and service marks of Ciena, Blue Planet, and/or their affiliates appearing in this publication are the property of Ciena and Blue Planet. Trade names, trademarks, and service marks of other companies appearing in this publication are the property of the respective holders. ",
+        "table_path": "",
+        "page_number": 44,
+        "type": "P[215]",
+        "header": "LEGAL NOTICES "
+      }
+    ]
+  },
+  {
+    "header": "Security ",
+    "content": [
+      {
+        "text": "Ciena® cannot be responsible for unauthorized use of equipment and will not make allowance or credit for unauthorized use or access. ",
+        "table_path": "",
+        "page_number": 44,
+        "type": "P[216]",
+        "header": "Security "
+      }
+    ]
+  }
+]

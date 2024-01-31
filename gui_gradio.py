@@ -1,5 +1,6 @@
 import gradio as gr
 import os
+from pathlib import Path
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 # from backend.llm.baseLLM import Remote_LLM 
 from backend.retrieval.ciena_retreival import CienaRetrieval
@@ -76,7 +77,11 @@ def bot(history):
 
 def main_get_src_ctx(message):
     query = message
+<<<<<<< HEAD
     # import pdb;pdb.set_trace()
+=======
+    import pdb;pdb.set_trace()
+>>>>>>> 8de701a291b22cecd8b6a5be597f2a93a3a3eb81
     relevant_docs = get_relevant_docs(query)
     rel_headers = relevant_headers(relevant_docs)
     context, sources = get_context(rel_headers)
@@ -104,10 +109,10 @@ CONTEXT: {ctx}
 
 def slow_echo(message, history):
     ctx, src = main_get_src_ctx(message)
-    # import pdb; pdb.set_trace()
     ctx = remove_duplicates_preserve_order(ctx)
     ctx = '\n'.join(ctx)
     print(ctx)
+<<<<<<< HEAD
     answer, src = gt_llm_answer(message, ctx, src)
     bot_response = answer
     # bot_response = answer.split('<|assistant|>')[1].split('</s>')[0]
@@ -127,9 +132,19 @@ def slow_echo(message, history):
     #     print("Key=", ke)
     bot_response += f"\n\n source: {pdf_name}\n Page: {page_num}" if pdf_name else ""
     return bot_response #
+=======
+    # answer, src = gt_llm_answer(message, ctx, src)
+    # bot_response = answer.replace('_x000D_', ' ')
+    # bot_response = bot_response.replace('x000D', ' ')
+    # source = Path(src['source']).stem
+    # ref_md = "# Source: " + source + " \npage number: " + str(src['page_number']) + '\n\n'
+    # final_answer = bot_response + '\n\n' + ref_md
+    # print(ctx)
+    # return final_answer #
+>>>>>>> 8de701a291b22cecd8b6a5be597f2a93a3a3eb81
 
 embedding_function = baseEmbedder().embedding_function
-vectordb = Chroma(persist_directory="./db", embedding_function=embedding_function)
+vectordb = Chroma(persist_directory="./db-uaa", embedding_function=embedding_function)
 retrieval_kwargs = {
     "threshold": 0.2,
     "k": 20,
@@ -140,8 +155,8 @@ retrieval_kwargs = {
 ciena_retreival = CienaRetrieval(**retrieval_kwargs)
 reranker = Reranker()
 
-
 def main():
+<<<<<<< HEAD
     # slow_echo("How to Activate bpfirewall Configuration Changes", None)
     # slow_echo("give me a table for ciena's BPO Runtime License", None)
     # slow_echo("How to Activate bpfirewall Configuration Changes", None)
@@ -160,6 +175,34 @@ def main():
         undo_btn="Delete Previous",
         clear_btn="Clear",
     ).launch(server_name='0.0.0.0')
+=======
+
+    ## UAA_AI_SDK_Handbook_ 230864_1-0.pdf
+    # slow_echo("What is the AI SDK?", None)
+    # slow_echo("How do I add an AI App in the AI SDK?", None)
+    # slow_echo("How do I use the AI Apps Manager?", None)
+
+    # ########### BP Engineering Guide
+    slow_echo("Give me a table for ciena's BPO Runtime License", None)
+    # slow_echo("In the BPO Runtime Licenses table, what is the part number for MCO?", None)
+    # slow_echo("Where can I deploy Blue Planet platform and solutions?", None)
+    # slow_echo(" What are Supported OS for cloud deployment using Kubernetes platform", None)
+    # slow_echo("What are the Server requirements for deploying SOO/MDSO/MCO on AWS on multiple hosts?", None)
+
+    # gr.ChatInterface(
+    #     slow_echo,
+    #     chatbot=gr.Chatbot(height=500),
+    #     textbox=gr.Textbox(placeholder="Ask Me any question related to BP UAA Docs", container=False, scale=7),
+    #     title="BP Chatbot",
+    #     description="Ask Me any question related to BP UAA Docs",
+    #     theme="soft",
+    #     # examples=["hi"],
+    #     cache_examples=False,
+    #     retry_btn=None,
+    #     undo_btn="Delete Previous",
+    #     clear_btn="Clear"
+    # ).launch(server_port= 8888, server_name= "0.0.0.0")
+>>>>>>> 8de701a291b22cecd8b6a5be597f2a93a3a3eb81
 
 if __name__ == "__main__":
     main()
