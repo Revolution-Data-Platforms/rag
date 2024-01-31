@@ -1,9 +1,10 @@
 import gradio as gr
 import os
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
-from backend.llm.cienaLLM import Remote_LLM 
+# from backend.llm.baseLLM import Remote_LLM 
 from backend.retrieval.ciena_retreival import CienaRetrieval
 from backend.embedder.baseEmbedder import baseEmbedder
+from backend.llm.cienaLLM import Remote_LLM
 from backend.retrieval.utils import *
 from backend.retrieval.rereanker import Reranker
 from langchain.document_loaders import JSONLoader
@@ -11,7 +12,6 @@ from langchain.vectorstores import Chroma
 
 import asyncio
 import time
-from concurrent.futures import ThreadPoolExecutor
 
 def load_db(dir= './output/'):
     """Load Ciena database."""
@@ -76,25 +76,29 @@ def bot(history):
 
 def main_get_src_ctx(message):
     query = message
+    # import pdb;pdb.set_trace()
     relevant_docs = get_relevant_docs(query)
     rel_headers = relevant_headers(relevant_docs)
     context, sources = get_context(rel_headers)
     return context, sources
 
 def gt_llm_answer(question, ctx, src):
-    # endpoint = " http://0.0.0.0:8000/answer"
-    # LLM_kwargs={'max_new_tokens': 1500, 'temperature': 0.4}
+    endpoint = " http://0.0.0.0:8000/answer"
+    LLM_kwargs={'max_new_tokens': 1500, 'temperature': 0.4}
+    not_found_response = "The requested information is not avilable."
 
+    # llm = Remote_LLM(endpoint=endpoint, generation_config=LLM_kwargs)
     llm = Remote_LLM()
-#     full_prompt = f"""\
-# <|system|> Given a part of a lengthy markdown document, answer the following question: `{question}`. Please, follow the same format as the source document given. </s>
-# <|user|>
-# please ONLY respond with: {{not_found_response}}, if the context does not provide the answer </s>
-# CONTEXT: {ctx} 
+    full_prompt = f"""\
+<|system|> Given a part of a lengthy markdown document, answer the following question: `{question}`. Please, follow the same format as the source document given. </s>
+<|user|>
+please ONLY respond with: {not_found_response}, if the context does not provide the answer </s>
+CONTEXT: {ctx} 
 
-# <|assistant|> """
+<|assistant|> """
 
-    answer = llm.generate(prompt= question, ctx= ctx)
+    answer = llm.generate(question, ctx)
+    if not_found_response in answer: src = None
     return answer, src
 
 
@@ -103,18 +107,31 @@ def slow_echo(message, history):
     # import pdb; pdb.set_trace()
     ctx = remove_duplicates_preserve_order(ctx)
     ctx = '\n'.join(ctx)
-    # print(ctx)
+    print(ctx)
     answer, src = gt_llm_answer(message, ctx, src)
+    bot_response = answer
     # bot_response = answer.split('<|assistant|>')[1].split('</s>')[0]
-    bot_response = answer.replace('_x000D_', ' ')
+    bot_response = bot_response.replace('_x000D_', ' ')
     bot_response = bot_response.replace('x000D', ' ')
-    print(answer)
+    # print(answer.split('<|assistant|>')[1])
+    print(src)
+    # import pdb;pdb.set_trace()
+    if src and "requested information" not in bot_response\
+          and 'The provided context does not include' not in bot_response:
+        pdf_name = src['pdf_name']
+        page_num = src['page_number']
+    else: pdf_name = None;page_num = None
+
+    # if 'old.pdf' in ke: ke = 'Blue Planet Cloud Deployment Guide 20.06.pdf'
+    # if ke:
+    #     print("Key=", ke)
+    bot_response += f"\n\n source: {pdf_name}\n Page: {page_num}" if pdf_name else ""
     return bot_response #
 
 embedding_function = baseEmbedder().embedding_function
 vectordb = Chroma(persist_directory="./db", embedding_function=embedding_function)
 retrieval_kwargs = {
-    "threshold": "0.8",
+    "threshold": 0.2,
     "k": 20,
     "embedder": embedding_function,
     "hybrid": True,
@@ -128,11 +145,11 @@ def main():
     # slow_echo("How to Activate bpfirewall Configuration Changes", None)
     # slow_echo("give me a table for ciena's BPO Runtime License", None)
     # slow_echo("How to Activate bpfirewall Configuration Changes", None)
-    # slow_echo("How to Activate bpfirewall Configuration Changes", None)
+    # slow_echo("Where can I deploy Blue Planet platform and solutions on?", None)
     
     gr.ChatInterface(
         slow_echo,
-        chatbot=gr.Chatbot(height=300),
+        chatbot=gr.Chatbot(height=500),
         textbox=gr.Textbox(placeholder="Ask Me any question related to BP Docs", container=False, scale=7),
         title="BP Chatbot",
         description="Ask Me any question related to BP Docs",
@@ -142,7 +159,7 @@ def main():
         retry_btn=None,
         undo_btn="Delete Previous",
         clear_btn="Clear",
-    ).launch(server_port= 8888)
+    ).launch(server_name='0.0.0.0')
 
 if __name__ == "__main__":
     main()

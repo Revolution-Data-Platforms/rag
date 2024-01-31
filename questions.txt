@@ -10,9 +10,9 @@ Answer: page 76, source: Blue Planet UAA RHEL
 +Where can I deploy Blue Planet platform and solutions on?
 Answer: Page 7, source: BP engineering guide
 
+=========================================================
 
-
-in the BPO Runtime Licenses table, what is the part number for NFVO?
+in the table of BPO Runtime Licenses, what is the part number for NFVO?
 
 =========================================================
 
@@ -20,6 +20,9 @@ in the BPO Runtime Licenses table, what is the part number for NFVO?
 Answer:Page 26, source: BP engineering guide
 
 =========================================================
+
+what is the Swappiness kernel parameter
+
 
 
 

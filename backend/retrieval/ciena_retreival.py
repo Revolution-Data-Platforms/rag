@@ -17,7 +17,8 @@ class CienaRetrieval:
 
     def get_semantic_res(self, query):
         """Retrieve semantic results from Ciena database."""
-        retriever = self.db.as_retriever(search_kwargs={'k': self.k, 'threshold': self.threshold})
+        # import pdb;pdb.set_trace()
+        retriever = self.db.as_retriever(search_kwargs={'k': self.k})
         semantic_res = retriever.get_relevant_documents(query= query)
         return semantic_res
 
@@ -38,18 +39,21 @@ class CienaRetrieval:
         res = self.db.get(where={"header": {"$in": headers}})
 
         sources = {}
-
+        # import pdb;pdb.set_trace()
         for i, item in enumerate(res['metadatas']):
             cur_header = item['header']
             table_dir = os.path.dirname(item["source"])
 
-            data_dir = './data'
-            pdf_dir = os.path.basename(item["source"]).split('.')[0]
-            pdf_name = pdf_dir + '.pdf'
-            pdf_path = os.path.join(data_dir, pdf_dir, pdf_name)
-
-            if pdf_path not in sources:
-                sources[pdf_name] = pdf_path
+            # data_dir = './data'
+            # pdf_dir = os.path.basename(item["source"]).split('.')[0]
+            # pdf_name = pdf_dir + '.pdf'
+            # pdf_path = os.path.join(data_dir, pdf_dir, pdf_name)
+            # pdf_name = os.path.basename(item["source"]).replace("json", "pdf")
+            pdf_name = os.path.basename(os.path.dirname(item["source"]))
+            # import pdb;pdb.set_trace()
+            if pdf_name not in sources:
+                sources["pdf_name"] = pdf_name
+                sources["page_number"] = item["page_number"]
 
             if 'Table' in item["type"] and item['table_path'] != '':
                 table_path = os.path.join(table_dir, item['table_path'])
@@ -61,5 +65,6 @@ class CienaRetrieval:
                 next_header = res['metadatas'][i+1]['header']
                 if next_header != cur_header:
                     context.append('\n\n')
+        # import pdb;pdb.set_trace()
         return context, sources
 

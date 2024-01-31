@@ -8,7 +8,7 @@ class Reranker:
         self.rereanker_model = rereanker_model
     
     def rerank(self, query, docs, k=8):
-        
+        # import pdb;pdb.set_trace()
         cross_encoder = CrossEncoder(self.rereanker_model)
         ranked_Res = {}
         for doc in docs:
